@@ -1,0 +1,548 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+완전한 1-10번 팰 CSV 생성 스크립트
+read.md의 모든 요구사항 충족
+"""
+
+import csv
+import re
+
+def parse_complete_pal_data():
+    """완전한 1-10번 팰 데이터 파싱"""
+    
+    # 모든 팰 데이터 저장
+    all_pals = []
+    
+    # 1. 도로롱 (기존 완성 데이터 사용)
+    pal_1 = {
+        'id': '1',
+        'name_kor': '도로롱',
+        'pal_nick_kor': '언덕길을 걷다 저 혼자 데굴데굴 구른다',
+        'description_kor': '언덕길을 걷다 저 혼자 데굴데굴 구른다. 결국 눈이 핑핑 돌아 몸을 못 가눌 때 간단히 처치할 수 있는 먹이 사슬의 최하층이다.',
+        'elements': '무속성',
+        'partnerSkill_name': '복슬복슬 방패',
+        'partnerSkill_describe': '발동하면 방패로 변하여 플레이어에게 장착된다.',
+        'partnerSkill_needItem': '',
+        'partnerSkill_needItemTechLevel': '0',
+        'partnerSkill_level': '1',
+        'stats_size': 'XS',
+        'stats_rarity': '1',
+        'stats_health': '70',
+        'stats_food': '150',
+        'stats_meleeAttack': '70',
+        'stats_attack': '70',
+        'stats_defense': '70',
+        'stats_workSpeed': '100',
+        'stats_support': '100',
+        'stats_captureRateCorrect': '1.5',
+        'stats_maleProbability': '50',
+        'stats_combiRank': '1470',
+        'stats_goldCoin': '1000',
+        'stats_egg': '평범한 알',
+        'stats_code': 'SheepBall',
+        'movement_slowWalkSpeed': '23',
+        'movement_walkSpeed': '40',
+        'movement_runSpeed': '400',
+        'movement_rideSprintSpeed': '550',
+        'movement_transportSpeed': '160',
+        'level60_health': '3100',
+        'level60_attack': '441',
+        'level60_defense': '391',
+        'activeSkills': '데굴데굴 솜사탕(무속성, 35파워, 1초) | 공기 대포(무속성, 25파워, 2초)',
+        'activeSkills_count': '2',
+        'passiveSkills': '',
+        'passiveSkills_count': '0',
+        'drops': '양털(1–3, 100%) | 도로롱의 양고기(1, 100%)',
+        'drops_count': '2',
+        'workSuitabilities': '수작업(LV.1) | 운반(LV.1) | 목장(LV.1)',
+        'workSuitabilities_count': '3',
+        'tribes': '커다란 털 뭉치 도로롱 | 도로롱',
+        'tribes_count': '2',
+        'spawners': '도로롱(Lv. 1–3, 1_1_plain_begginer) | 도로롱(Lv. 1–4, 1_2_plain_grass)',
+        'spawners_count': '2'
+    }
+    
+    # 2. 까부냥 (기존 완성 데이터 사용)
+    pal_2 = {
+        'id': '2',
+        'name_kor': '까부냥',
+        'pal_nick_kor': '얼핏 보기엔 당당하지만 실은 대단한 겁쟁이다',
+        'description_kor': '얼핏 보기엔 당당하지만 실은 대단한 겁쟁이다. 까부냥이(가) 핥아준다는 건 어떤 의미에선 최고의 굴욕이다.',
+        'elements': '무속성',
+        'partnerSkill_name': '고양이 손 빌리기',
+        'partnerSkill_describe': '보유하고 있는 동안 까부냥이(가) 짐을 대신 짊어져 플레이어의 소지 중량 제한이 증가한다.',
+        'partnerSkill_needItem': '',
+        'partnerSkill_needItemTechLevel': '0',
+        'partnerSkill_level': '1',
+        'stats_size': 'XS',
+        'stats_rarity': '1',
+        'stats_health': '70',
+        'stats_food': '150',
+        'stats_meleeAttack': '70',
+        'stats_attack': '70',
+        'stats_defense': '70',
+        'stats_workSpeed': '100',
+        'stats_support': '100',
+        'stats_captureRateCorrect': '1.5',
+        'stats_maleProbability': '50',
+        'stats_combiRank': '1460',
+        'stats_goldCoin': '1000',
+        'stats_egg': '평범한 알',
+        'stats_code': 'PinkCat',
+        'movement_slowWalkSpeed': '30',
+        'movement_walkSpeed': '60',
+        'movement_runSpeed': '400',
+        'movement_rideSprintSpeed': '550',
+        'movement_transportSpeed': '160',
+        'level60_health': '3100–3782',
+        'level60_attack': '441–543',
+        'level60_defense': '391–493',
+        'activeSkills': '냥냥 펀치(무속성, 40파워, 1초) | 공기 대포(무속성, 25파워, 2초) | 모래 돌풍(땅 속성, 40파워, 4초) | 파워 샷(무속성, 35파워, 4초) | 바람의 칼날(풀 속성, 30파워, 2초) | 씨앗 기관총(풀 속성, 50파워, 9초) | 팰 폭발(무속성, 150파워, 55초)',
+        'activeSkills_count': '7',
+        'passiveSkills': '겁쟁이',
+        'passiveSkills_count': '1',
+        'drops': '빨간 열매(1, 100%)',
+        'drops_count': '1',
+        'workSuitabilities': '수작업(LV.1) | 채집(LV.1) | 채굴(LV.1) | 운반(LV.1)',
+        'workSuitabilities_count': '4',
+        'tribes': '잘난 척 대마왕 까부냥 | 까부냥',
+        'tribes_count': '2',
+        'spawners': '까부냥(Lv. 1–3, 1_1_plain_begginer) | 까부냥(Lv. 3–5, 1_3_plain_kitsunbi) | 까부냥(Lv. 2–5, PvP_21_1_1) | 까부냥(Lv. 2–5, PvP_21_2_1) | 잘난 척 대마왕 까부냥(Lv. 10–13, 구릉 동굴, 외딴 섬의 동굴)',
+        'spawners_count': '5'
+    }
+    
+    # 3. 꼬꼬닭
+    pal_3 = {
+        'id': '3',
+        'name_kor': '꼬꼬닭',
+        'pal_nick_kor': '너무나 약하고 또 너무나 맛있다',
+        'description_kor': '너무나 약하고 또 너무나 맛있다. 도로롱과 함께 최약체를 담당한다. 많이 잡았다 싶으면 또 어디선가 튀어나온다.',
+        'elements': '무속성',
+        'partnerSkill_name': '알 생산',
+        'partnerSkill_describe': '가축 목장에 배치하면 가끔씩 알을(를) 낳기도 한다.',
+        'partnerSkill_needItem': '',
+        'partnerSkill_needItemTechLevel': '0',
+        'partnerSkill_level': '1',
+        'stats_size': 'XS',
+        'stats_rarity': '1',
+        'stats_health': '60',
+        'stats_food': '100',
+        'stats_meleeAttack': '70',
+        'stats_attack': '60',
+        'stats_defense': '60',
+        'stats_workSpeed': '100',
+        'stats_support': '70',
+        'stats_captureRateCorrect': '1.5',
+        'stats_maleProbability': '50',
+        'stats_combiRank': '1500',
+        'stats_goldCoin': '1000',
+        'stats_egg': '평범한 알',
+        'stats_code': 'ChickenPal',
+        'movement_slowWalkSpeed': '50',
+        'movement_walkSpeed': '50',
+        'movement_runSpeed': '375',
+        'movement_rideSprintSpeed': '550',
+        'movement_transportSpeed': '212',
+        'level60_health': '2775 – 3360',
+        'level60_attack': '392 – 480',
+        'level60_defense': '342 – 430',
+        'activeSkills': '치킨 태클(무속성, 30파워, 1초)',
+        'activeSkills_count': '1',
+        'passiveSkills': '',
+        'passiveSkills_count': '0',
+        'drops': '알(1, 100%) | 꼬꼬닭의 닭고기(1, 100%)',
+        'drops_count': '2',
+        'workSuitabilities': '채집(LV.1) | 목장(LV.1)',
+        'workSuitabilities_count': '2',
+        'tribes': '퉁퉁한 몸집의 꼬꼬닭 | 꼬꼬닭',
+        'tribes_count': '2',
+        'spawners': '꼬꼬닭(Lv. 1–3, 1_1_plain_begginer) | 꼬꼬닭(Lv. 3–5, 1_3_plain_kitsunbi)',
+        'spawners_count': '2'
+    }
+    
+    # 4. 큐룰리스
+    pal_4 = {
+        'id': '4',
+        'name_kor': '큐룰리스',
+        'pal_nick_kor': '5~7세 정도의 지능이 있다',
+        'description_kor': '5~7세 정도의 지능이 있다. 파트너용이지만 무기 쓰는 법을 배운 개체가 주인을 살해한 기록도 일부 존재한다.',
+        'elements': '풀 속성',
+        'partnerSkill_name': '큐룰리스 리코일',
+        'partnerSkill_describe': '발동하면 플레이어의 머리 위에 올라 공격에 맞춰 기관단총으로 추격한다.',
+        'partnerSkill_needItem': '기술11',
+        'partnerSkill_needItemTechLevel': '11',
+        'partnerSkill_level': '1',
+        'stats_size': 'XS',
+        'stats_rarity': '1',
+        'stats_health': '75',
+        'stats_food': '100',
+        'stats_meleeAttack': '70',
+        'stats_attack': '70',
+        'stats_defense': '70',
+        'stats_workSpeed': '100',
+        'stats_support': '100',
+        'stats_captureRateCorrect': '0.9',
+        'stats_maleProbability': '50',
+        'stats_combiRank': '1430',
+        'stats_goldCoin': '1010',
+        'stats_egg': '신록의 알',
+        'stats_code': 'Carbunclo',
+        'movement_slowWalkSpeed': '20',
+        'movement_walkSpeed': '40',
+        'movement_runSpeed': '400',
+        'movement_rideSprintSpeed': '550',
+        'movement_transportSpeed': '250',
+        'level60_health': '3262 – 3993',
+        'level60_attack': '441 – 543',
+        'level60_defense': '391 – 493',
+        'activeSkills': '바람의 칼날(풀 속성, 30파워, 2초) | 공기 대포(무속성, 25파워, 2초) | 파워 샷(무속성, 35파워, 4초) | 씨앗 기관총(풀 속성, 50파워, 9초) | 파워 폭탄(무속성, 70파워, 15초) | 가시덩굴(풀 속성, 95파워, 25초) | 태양 폭발(풀 속성, 150파워, 55초)',
+        'activeSkills_count': '7',
+        'passiveSkills': '',
+        'passiveSkills_count': '0',
+        'drops': '열매 씨(1, 100%) | 하급 의약품(1, 20%)',
+        'drops_count': '2',
+        'workSuitabilities': '파종(LV.1) | 수작업(LV.1) | 채집(LV.1) | 벌목(LV.1) | 제약(LV.1)',
+        'workSuitabilities_count': '5',
+        'tribes': '초원의 제일가는 겁쟁이 큐룰리스 | 큐룰리스',
+        'tribes_count': '2',
+        'spawners': '큐룰리스(Lv. 3–5, 1_2_plain_grass) | 큐룰리스(Lv. 3–6, 1_4_plain_fox) | 큐룰리스(Lv. 7–11, 1_6_plain_Kirin) | 큐룰리스(Lv. 2–5, PvP_21_1_1) | 초원의 제일가는 겁쟁이 큐룰리스(Lv. 10–13, 구릉 동굴, 외딴 섬의 동굴) | 큐룰리스(Lv. 6–9, 구릉 동굴, 외딴 섬의 동굴)',
+        'spawners_count': '6'
+    }
+    
+    # 5. 파이호
+    pal_5 = {
+        'id': '5',
+        'name_kor': '파이호',
+        'pal_nick_kor': '태어난 직후엔 불을 잘 못 다뤄서',
+        'description_kor': '태어난 직후엔 불을 잘 못 다뤄서 걸핏하면 불을 뿜다가 숨이 탁 막힌다. 파이호의 재채기는 산림 화재의 원인이 된다.',
+        'elements': '화염 속성',
+        'partnerSkill_name': '포옹 파이어',
+        'partnerSkill_describe': '발동하면 화염방사기로 변하여 플레이어에게 장착된다.',
+        'partnerSkill_needItem': '기술6',
+        'partnerSkill_needItemTechLevel': '6',
+        'partnerSkill_level': '1',
+        'stats_size': 'XS',
+        'stats_rarity': '1',
+        'stats_health': '65',
+        'stats_food': '150',
+        'stats_meleeAttack': '70',
+        'stats_attack': '75',
+        'stats_defense': '70',
+        'stats_workSpeed': '100',
+        'stats_support': '100',
+        'stats_captureRateCorrect': '1.1',
+        'stats_maleProbability': '50',
+        'stats_combiRank': '1400',
+        'stats_goldCoin': '1040',
+        'stats_egg': '열기 나는 알',
+        'stats_code': 'Kitsunebi',
+        'movement_slowWalkSpeed': '40',
+        'movement_walkSpeed': '80',
+        'movement_runSpeed': '400',
+        'movement_rideSprintSpeed': '550',
+        'movement_transportSpeed': '240',
+        'level60_health': '2937 – 3571',
+        'level60_attack': '465 – 575',
+        'level60_defense': '391 – 493',
+        'activeSkills': '파이어 샷(화염 속성, 30파워, 2초) | 모래 돌풍(땅 속성, 40파워, 4초) | 스피릿 파이어(화염 속성, 45파워, 7초) | 불화살(화염 속성, 55파워, 10초) | 파이어 브레스(화염 속성, 70파워, 15초) | 유령의 불꽃(어둠 속성, 75파워, 16초) | 화염구(화염 속성, 150파워, 55초)',
+        'activeSkills_count': '7',
+        'passiveSkills': '',
+        'passiveSkills_count': '0',
+        'drops': '가죽(1, 100%) | 발화 기관(1–2, 100%)',
+        'drops_count': '2',
+        'workSuitabilities': '불 피우기(LV.1)',
+        'workSuitabilities_count': '1',
+        'tribes': '여로를 비추는 등불 파이호 | 파이호',
+        'tribes_count': '2',
+        'spawners': '파이호(Lv. 3–6, 1_3_plain_kitsunbi) | 파이호(Lv. 2–5, PvP_21_2_1) | 여로를 비추는 등불 파이호(Lv. 10–13, 구릉 동굴, 외딴 섬의 동굴) | 파이호(Lv. 6–9, 구릉 동굴, 외딴 섬의 동굴) | 파이호(Lv. 9–11, 3_4_volcano_1)',
+        'spawners_count': '5'
+    }
+    
+    # 6. 청부리
+    pal_6 = {
+        'id': '6',
+        'name_kor': '청부리',
+        'pal_nick_kor': '자신이 탄생한 물에선 어디든지',
+        'description_kor': '자신이 탄생한 물에선 어디든지 물결을 일으킨다. 급할 때는 몸으로 물살을 타고 이동한다. 기운이 넘쳐 종종 벽에 부딪혀 죽는다.',
+        'elements': '물 속성',
+        'partnerSkill_name': '서핑 태클',
+        'partnerSkill_describe': '발동하면 청부리이(가) 적을 향해 보디 서핑을 하며 달려든다.',
+        'partnerSkill_needItem': '',
+        'partnerSkill_needItemTechLevel': '0',
+        'partnerSkill_level': '1',
+        'stats_size': 'XS',
+        'stats_rarity': '1',
+        'stats_health': '60',
+        'stats_food': '150',
+        'stats_meleeAttack': '80',
+        'stats_attack': '80',
+        'stats_defense': '60',
+        'stats_workSpeed': '100',
+        'stats_support': '100',
+        'stats_captureRateCorrect': '1.1',
+        'stats_maleProbability': '50',
+        'stats_combiRank': '1330',
+        'stats_goldCoin': '1120',
+        'stats_egg': '축축한 알',
+        'stats_code': 'BluePlatypus',
+        'movement_slowWalkSpeed': '70',
+        'movement_walkSpeed': '105',
+        'movement_runSpeed': '300',
+        'movement_rideSprintSpeed': '400',
+        'movement_transportSpeed': '202',
+        'level60_health': '2775 – 3360',
+        'level60_attack': '490 – 607',
+        'level60_defense': '342 – 430',
+        'activeSkills': '아쿠아 샷(물 속성, 40파워, 4초) | 파워 샷(무속성, 35파워, 4초) | 워터 제트(물 속성, 30파워, 2초) | 얼음 미사일(얼음 속성, 30파워, 3초) | 버블 샷(물 속성, 65파워, 13초) | 물폭탄(물 속성, 100파워, 30초) | 하이드로 스트림(물 속성, 150파워, 55초)',
+        'activeSkills_count': '7',
+        'passiveSkills': '',
+        'passiveSkills_count': '0',
+        'drops': '가죽(1, 100%) | 팰의 체액(1, 100%)',
+        'drops_count': '2',
+        'workSuitabilities': '관개(LV.1) | 수작업(LV.1) | 운반(LV.1)',
+        'workSuitabilities_count': '3',
+        'tribes': '장난기 많은 파도 타는 승려 청부리 | 청부리',
+        'tribes_count': '2',
+        'spawners': '청부리(Lv. 3–6, 1_4_plain_fox) | 청부리(Lv. 10–13, 1_9_plain_SweetsSheep) | 청부리(Lv. 2–5, PvP_21_1_1) | 장난기 많은 파도 타는 승려 청부리(Lv. 10–13, 구릉 동굴, 외딴 섬의 동굴) | 청부리(Lv. 6–9, 구릉 동굴, 외딴 섬의 동굴)',
+        'spawners_count': '5'
+    }
+    
+    # 7. 번개냥
+    pal_7 = {
+        'id': '7',
+        'name_kor': '번개냥',
+        'pal_nick_kor': '건기엔 신경질적이어서 항상 까칠하다',
+        'description_kor': '건기엔 신경질적이어서 항상 까칠하다. 같은 무리끼리의 사소한 충돌도 우당탕탕 큰 싸움으로 번진다.',
+        'elements': '번개 속성',
+        'partnerSkill_name': '정전기',
+        'partnerSkill_describe': '보유하고 있는 동안 번개 속성 팰의 공격력이 증가한다.',
+        'partnerSkill_needItem': '',
+        'partnerSkill_needItemTechLevel': '0',
+        'partnerSkill_level': '1',
+        'stats_size': 'XS',
+        'stats_rarity': '1',
+        'stats_health': '60',
+        'stats_food': '150',
+        'stats_meleeAttack': '60',
+        'stats_attack': '75',
+        'stats_defense': '70',
+        'stats_workSpeed': '100',
+        'stats_support': '80',
+        'stats_captureRateCorrect': '1.1',
+        'stats_maleProbability': '50',
+        'stats_combiRank': '1410',
+        'stats_goldCoin': '1030',
+        'stats_egg': '찌릿찌릿한 알',
+        'stats_code': 'ElecCat',
+        'movement_slowWalkSpeed': '40',
+        'movement_walkSpeed': '80',
+        'movement_runSpeed': '350',
+        'movement_rideSprintSpeed': '500',
+        'movement_transportSpeed': '270',
+        'level60_health': '2775 – 3360',
+        'level60_attack': '465 – 575',
+        'level60_defense': '391 – 493',
+        'activeSkills': '스파크 샷(번개 속성, 30파워, 2초) | 모래 돌풍(땅 속성, 40파워, 4초) | 전기 파장(번개 속성, 40파워, 4초) | 번개 구체(번개 속성, 50파워, 9초) | 트라이 썬더(번개 속성, 90파워, 22초) | 라인 썬더(번개 속성, 75파워, 16초) | 전기 볼트(번개 속성, 150파워, 55초)',
+        'activeSkills_count': '7',
+        'passiveSkills': '',
+        'passiveSkills_count': '0',
+        'drops': '발전 기관(1–2, 100%)',
+        'drops_count': '1',
+        'workSuitabilities': '발전(LV.1) | 수작업(LV.1) | 운반(LV.1)',
+        'workSuitabilities_count': '3',
+        'tribes': '장난기 많은 얼룩 고양이 번개냥 | 번개냥',
+        'tribes_count': '2',
+        'spawners': '번개냥(Lv. 3–6, 1_4_plain_fox) | 번개냥(Lv. 14–17, 1_8_plain_dessert)',
+        'spawners_count': '2'
+    }
+    
+    # 8. 몽지
+    pal_8 = {
+        'id': '8',
+        'name_kor': '몽지',
+        'pal_nick_kor': '예전엔 나뭇가지처럼 가늘고 긴 물건을',
+        'description_kor': '예전엔 나뭇가지처럼 가늘고 긴 물건을 무기로 삼았다. 인간과 엮이며 그런 무기는 쓰지 않게 됐다. 대신 가늘고 길며 더 효율적인 \'총기\'를 찾았다.',
+        'elements': '풀 속성',
+        'partnerSkill_name': '신난 소총',
+        'partnerSkill_describe': '발동하면 일정 시간 몽지이(가) 근처 적에게 돌격 소총을 난사한다.',
+        'partnerSkill_needItem': '기술12',
+        'partnerSkill_needItemTechLevel': '12',
+        'partnerSkill_level': '1',
+        'stats_size': 'XS',
+        'stats_rarity': '1',
+        'stats_health': '80',
+        'stats_food': '150',
+        'stats_meleeAttack': '100',
+        'stats_attack': '70',
+        'stats_defense': '70',
+        'stats_workSpeed': '100',
+        'stats_support': '100',
+        'stats_captureRateCorrect': '1.1',
+        'stats_maleProbability': '50',
+        'stats_combiRank': '1250',
+        'stats_goldCoin': '1280',
+        'stats_egg': '신록의 알',
+        'stats_code': 'Monkey',
+        'movement_slowWalkSpeed': '48',
+        'movement_walkSpeed': '48',
+        'movement_runSpeed': '300',
+        'movement_rideSprintSpeed': '400',
+        'movement_transportSpeed': '174',
+        'level60_health': '3425 – 4205',
+        'level60_attack': '441 – 543',
+        'level60_defense': '391 – 493',
+        'activeSkills': '바람의 칼날(풀 속성, 30파워, 2초) | 모래 돌풍(땅 속성, 40파워, 4초) | 씨앗 기관총(풀 속성, 50파워, 9초) | 씨앗 지뢰(풀 속성, 65파워, 13초) | 바위 대포(땅 속성, 70파워, 15초) | 초록 폭풍(풀 속성, 80파워, 18초) | 태양 폭발(풀 속성, 150파워, 55초)',
+        'activeSkills_count': '7',
+        'passiveSkills': '',
+        'passiveSkills_count': '0',
+        'drops': '버섯(1, 100%)',
+        'drops_count': '1',
+        'workSuitabilities': '파종(LV.1) | 수작업(LV.1) | 채집(LV.1) | 벌목(LV.1) | 운반(LV.1)',
+        'workSuitabilities_count': '5',
+        'tribes': '금손을 가진 몽지 | 몽지',
+        'tribes_count': '2',
+        'spawners': '몽지(Lv. 3–5, 1_2_plain_grass) | 몽지(Lv. 3–6, 1_5_plain_pachiguri) | 몽지(Lv. 2–5, PvP_21_2_1) | 금손을 가진 몽지(Lv. 10–13, 구릉 동굴, 외딴 섬의 동굴) | 몽지(Lv. 6–9, 구릉 동굴, 외딴 섬의 동굴)',
+        'spawners_count': '5'
+    }
+    
+    # 9. 불꽃밤비
+    pal_9 = {
+        'id': '9',
+        'name_kor': '불꽃밤비',
+        'pal_nick_kor': '야생 불꽃밤비는 놀라울 정도로',
+        'description_kor': '야생 불꽃밤비은(는) 놀라울 정도로 건강을 잘 지킨다. 하루에 하나씩 가지를 태워 만든 숯을 먹는 것이 영원한 건강의 비결이라고 한다.',
+        'elements': '화염 속성',
+        'partnerSkill_name': '작은 불씨',
+        'partnerSkill_describe': '보유하고 있는 동안 화염 속성 팰의 공격력이 증가한다.',
+        'partnerSkill_needItem': '',
+        'partnerSkill_needItemTechLevel': '0',
+        'partnerSkill_level': '1',
+        'stats_size': 'S',
+        'stats_rarity': '2',
+        'stats_health': '75',
+        'stats_food': '225',
+        'stats_meleeAttack': '100',
+        'stats_attack': '70',
+        'stats_defense': '75',
+        'stats_workSpeed': '100',
+        'stats_support': '100',
+        'stats_captureRateCorrect': '1.1',
+        'stats_maleProbability': '50',
+        'stats_combiRank': '1155',
+        'stats_goldCoin': '2950',
+        'stats_egg': '열기 나는 알',
+        'stats_code': 'FlameBambi',
+        'movement_slowWalkSpeed': '70',
+        'movement_walkSpeed': '100',
+        'movement_runSpeed': '400',
+        'movement_rideSprintSpeed': '550',
+        'movement_transportSpeed': '-1',
+        'level60_health': '3262 – 3993',
+        'level60_attack': '441 – 543',
+        'level60_defense': '415 – 525',
+        'activeSkills': '파이어 샷(화염 속성, 30파워, 2초) | 파워 샷(무속성, 35파워, 4초) | 스피릿 파이어(화염 속성, 45파워, 7초) | 불화살(화염 속성, 55파워, 10초) | 화염 폭풍(화염 속성, 80파워, 18초) | 인페르노(화염 속성, 120파워, 40초) | 화염구(화염 속성, 150파워, 55초)',
+        'activeSkills_count': '7',
+        'passiveSkills': '',
+        'passiveSkills_count': '0',
+        'drops': '발화 기관(2–3, 100%) | 가죽(1, 100%)',
+        'drops_count': '2',
+        'workSuitabilities': '불 피우기(LV.1)',
+        'workSuitabilities_count': '1',
+        'tribes': '무리의 우두머리 불꽃밤비 | 불꽃밤비',
+        'tribes_count': '2',
+        'spawners': '불꽃밤비(Lv. 2–5, PvP_21_1_1) | 무리의 우두머리 불꽃밤비(Lv. 10–13, 구릉 동굴, 외딴 섬의 동굴) | 불꽃밤비(Lv. 6–9, 구릉 동굴, 외딴 섬의 동굴) | 불꽃밤비(Lv. 9–11, 3_4_volcano_1)',
+        'spawners_count': '4'
+    }
+    
+    # 10. 펭키
+    pal_10 = {
+        'id': '10',
+        'name_kor': '펭키',
+        'pal_nick_kor': '날개가 완전히 퇴화해 날 수 없다',
+        'description_kor': '날개가 완전히 퇴화해 날 수 없다. 대신 유전자에 새겨진 하늘을 향한 미련이 있어 어떻게든 다시 날아오르려고 한다.',
+        'elements': '물 속성|얼음 속성',
+        'partnerSkill_name': '펭키 발사기',
+        'partnerSkill_describe': '발동하면 로켓 발사기을(를) 장착하여 펭키을(를) 탄환 삼아 발사한다. 착탄하여 폭발하면 펭키이(가) 빈사 상태가 된다.',
+        'partnerSkill_needItem': '기술17',
+        'partnerSkill_needItemTechLevel': '17',
+        'partnerSkill_level': '1',
+        'stats_size': 'XS',
+        'stats_rarity': '1',
+        'stats_health': '70',
+        'stats_food': '150',
+        'stats_meleeAttack': '70',
+        'stats_attack': '75',
+        'stats_defense': '70',
+        'stats_workSpeed': '100',
+        'stats_support': '100',
+        'stats_captureRateCorrect': '0.9',
+        'stats_maleProbability': '50',
+        'stats_combiRank': '1350',
+        'stats_goldCoin': '1080',
+        'stats_egg': '축축한 알',
+        'stats_code': 'Penguin',
+        'movement_slowWalkSpeed': '30',
+        'movement_walkSpeed': '60',
+        'movement_runSpeed': '500',
+        'movement_rideSprintSpeed': '650',
+        'movement_transportSpeed': '265',
+        'level60_health': '3100 – 3782',
+        'level60_attack': '465 – 575',
+        'level60_defense': '391 – 493',
+        'activeSkills': '얼음 미사일(얼음 속성, 30파워, 3초) | 워터 제트(물 속성, 30파워, 2초) | 아쿠아 샷(물 속성, 40파워, 4초) | 얼음 칼날(얼음 속성, 55파워, 10초) | 빙산(얼음 속성, 70파워, 15초) | 눈보라 스파이크(얼음 속성, 130파워, 45초) | 하이드로 스트림(물 속성, 150파워, 55초)',
+        'activeSkills_count': '7',
+        'passiveSkills': '',
+        'passiveSkills_count': '0',
+        'drops': '빙결 기관(1–2, 100%) | 팰의 체액(1, 100%)',
+        'drops_count': '2',
+        'workSuitabilities': '관개(LV.1) | 수작업(LV.1) | 냉각(LV.1) | 운반(LV.1)',
+        'workSuitabilities_count': '4',
+        'tribes': '과식한 펭키 | 펭키',
+        'tribes_count': '2',
+        'spawners': '펭키(Lv. 10–12, World Map 311,-13) | 펭키(Lv. 3–6, 1_3_plain_kitsunbi) | 펭키(Lv. 2–4, 1_3_water) | 펭키(Lv. 9–12, 1_12_plain_BossTower) | 펭키(Lv. 30–34, snow_5_2_SnowGrass) | 과식한 펭키(Lv. 10–13, 구릉 동굴, 외딴 섬의 동굴)',
+        'spawners_count': '6'
+    }
+    
+    # 모든 팰 데이터를 리스트에 추가
+    all_pals = [pal_1, pal_2, pal_3, pal_4, pal_5, pal_6, pal_7, pal_8, pal_9, pal_10]
+    
+    return all_pals
+
+def create_ultimate_csv():
+    """완전한 CSV 생성"""
+    
+    print("🚀 완전한 1-10번 팰 CSV 생성 시작!")
+    
+    # 모든 팰 데이터 가져오기
+    all_pals = parse_complete_pal_data()
+    
+    # CSV 생성
+    filename = 'ultimate_complete_1_to_10_pals.csv'
+    
+    with open(filename, 'w', encoding='utf-8', newline='') as f:
+        if all_pals:
+            writer = csv.DictWriter(f, fieldnames=all_pals[0].keys())
+            writer.writeheader()
+            writer.writerows(all_pals)
+    
+    print(f"🎉 완전한 CSV 생성 완료!")
+    print(f"📋 총 {len(all_pals)}개 팰 데이터")
+    print(f"📄 파일명: {filename}")
+    print(f"🔥 read.md 모든 요구사항 충족:")
+    print(f"   ✅ 기본 정보: id, name_kor, pal_nick_kor, description_kor, elements")
+    print(f"   ✅ Stats: 15개 모든 스탯 포함")
+    print(f"   ✅ Movement: 5개 모든 이동 데이터")
+    print(f"   ✅ Level 60: 체력, 공격, 방어")
+    print(f"   ✅ Partner Skill: 이름, 설명, 필요아이템, 레벨")
+    print(f"   ✅ Active Skills: 상세 스킬 목록과 개수")
+    print(f"   ✅ Passive Skills: 패시브 스킬과 개수")
+    print(f"   ✅ Drops: 드롭 아이템과 개수")
+    print(f"   ✅ Work Suitabilities: 작업 적성과 개수")
+    print(f"   ✅ Tribes: 부족 정보와 개수")
+    print(f"   ✅ Spawners: 스포너 정보와 개수")
+    
+    return all_pals
+
+if __name__ == "__main__":
+    create_ultimate_csv() 

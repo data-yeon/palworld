@@ -1,0 +1,450 @@
+{
+  "batch_info": {
+    "total_pals_extracted": 20,
+    "batch_range": "1-20",
+    "extraction_date": "2024-12-31",
+    "source": "https://paldb.cc/ko/",
+    "method": "firecrawl_extract"
+  },
+  "pals": [
+    {
+      "id": "Lamball",
+      "drops": [
+        {
+          "itemName": "양털",
+          "quantity": "1–3",
+          "probability": "100%"
+        },
+        {
+          "itemName": "도로롱의 양고기",
+          "quantity": "1",
+          "probability": "100%"
+        }
+      ],
+      "stats": {
+        "egg": "평범한 알",
+        "code": "SheepBall",
+        "food": 150,
+        "size": "XS",
+        "attack": 70,
+        "health": 70,
+        "rarity": 1,
+        "defense": 70,
+        "support": 100,
+        "goldCoin": 1000,
+        "combiRank": 1470,
+        "workSpeed": 100,
+        "meleeAttack": 70,
+        "maleProbability": 50,
+        "captureRateCorrect": 1.5
+      },
+      "tribes": [
+        {
+          "name": "커다란 털 뭉치 도로롱",
+          "type": "Tribe Boss"
+        },
+        {
+          "name": "도로롱",
+          "type": "Tribe Normal"
+        },
+        {
+          "name": "도로롱",
+          "type": "Tribe Normal"
+        }
+      ],
+      "elements": [
+        "무속성"
+      ],
+      "movement": {
+        "runSpeed": 400,
+        "walkSpeed": 40,
+        "slowWalkSpeed": 23,
+        "transportSpeed": 160,
+        "rideSprintSpeed": 550
+      },
+      "name_kor": "도로롱",
+      "spawners": [
+        {
+          "area": "1_1_plain_begginer",
+          "name": "도로롱",
+          "level": "Lv. 1–3"
+        },
+        {
+          "area": "1_2_plain_grass",
+          "name": "도로롱",
+          "level": "Lv. 1–4"
+        },
+        {
+          "area": "1_5_plain_pachiguri",
+          "name": "도로롱",
+          "level": "Lv. 3–5"
+        },
+        {
+          "area": "1_7_plain_Pekodon",
+          "name": "도로롱",
+          "level": "Lv. 13–14"
+        },
+        {
+          "area": "PvP_21_1_1",
+          "name": "도로롱",
+          "level": "Lv. 2–5"
+        },
+        {
+          "area": "PvP_21_2_1",
+          "name": "도로롱",
+          "level": "Lv. 2–5"
+        },
+        {
+          "area": "구릉 동굴, 외딴 섬의 동굴",
+          "name": "커다란 털 뭉치 도로롱",
+          "level": "Lv. 10–13"
+        },
+        {
+          "area": "구릉 동굴, 외딴 섬의 동굴",
+          "name": "도로롱",
+          "level": "Lv. 6–9"
+        },
+        {
+          "area": "Captured Cage: Grass2",
+          "name": "도로롱",
+          "level": "Lv. 10 – 20"
+        }
+      ],
+      "activeSkills": [
+        {
+          "name": "데굴데굴 솜사탕",
+          "power": 35,
+          "element": "무속성",
+          "coolTime": 1,
+          "describe": "[도로롱] 전용 스킬. 데굴데굴 구르면서 적을 쫓아간다. 공격 후엔 눈이 핑핑 돌아 움직일 수 없게 된다.",
+          "meleeAttack": true,
+          "shootAttack": false,
+          "accumulatedValue": 0,
+          "accumulatedElement": ""
+        },
+        {
+          "name": "공기 대포",
+          "power": 25,
+          "element": "무속성",
+          "coolTime": 2,
+          "describe": "고속으로 날아가는 공기 덩어리를 발사한다.",
+          "meleeAttack": false,
+          "shootAttack": false,
+          "accumulatedValue": 0,
+          "accumulatedElement": ""
+        },
+        {
+          "name": "파워 샷",
+          "power": 35,
+          "element": "무속성",
+          "coolTime": 4,
+          "describe": "에너지를 모아 탄환 형태로 발사한다.",
+          "meleeAttack": false,
+          "shootAttack": false,
+          "accumulatedValue": 0,
+          "accumulatedElement": ""
+        },
+        {
+          "name": "자폭",
+          "power": 230,
+          "element": "무속성",
+          "coolTime": 55,
+          "describe": "목숨을 걸고 장렬히 폭발한다. 자신은 전투 불능 상태가 된다.",
+          "meleeAttack": false,
+          "shootAttack": false,
+          "accumulatedValue": 100,
+          "accumulatedElement": "화상"
+        },
+        {
+          "name": "번개 구체",
+          "power": 50,
+          "element": "번개 속성",
+          "coolTime": 9,
+          "describe": "적을 천천히 추적하는 천둥 구체를 발사한다.",
+          "meleeAttack": false,
+          "shootAttack": false,
+          "accumulatedValue": 50,
+          "accumulatedElement": "감전"
+        },
+        {
+          "name": "파워 폭탄",
+          "power": 70,
+          "element": "무속성",
+          "coolTime": 15,
+          "describe": "에너지를 대량으로 모아 거대한 구체 형태로 발사한다.",
+          "meleeAttack": false,
+          "shootAttack": false,
+          "accumulatedValue": 0,
+          "accumulatedElement": ""
+        },
+        {
+          "name": "팰 폭발",
+          "power": 150,
+          "element": "무속성",
+          "coolTime": 55,
+          "describe": "파괴 에너지를 모아 전방에 광범위하게 초강력 광선을 발사한다.",
+          "meleeAttack": false,
+          "shootAttack": false,
+          "accumulatedValue": 0,
+          "accumulatedElement": ""
+        }
+      ],
+      "level60Stats": {
+        "attack": 441,
+        "health": 3100,
+        "defense": 391
+      },
+      "pal_nick_kor": "#1",
+      "partnerSkill": {
+        "name": "복슬복슬 방패",
+        "items": [
+          {
+            "name": "양털",
+            "quantity": "1–3",
+            "probability": "100%"
+          }
+        ],
+        "level": 1,
+        "describe": "발동하면 방패로 변하여 플레이어에게 장착된다. [가축 목장]에 배치하면 [양털]을(를) 떨어뜨리기도 한다.",
+        "needItem": "",
+        "needItemTechLevel": 0
+      },
+      "passiveSkills": [],
+      "description_kor": "언덕길을 걷다 저 혼자 데굴데굴 구른다. 결국 눈이 핑핑 돌아 몸을 못 가눌 때 간단히 처치할 수 있는 먹이 사슬의 최하층이다.",
+      "workSuitabilities": [
+        {
+          "work": "수작업",
+          "level": 1
+        },
+        {
+          "work": "운반",
+          "level": 1
+        },
+        {
+          "work": "목장",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "Cattiva",
+      "drops": [
+        {
+          "itemName": "빨간 열매",
+          "quantity": "1",
+          "probability": "100%"
+        }
+      ],
+      "stats": {
+        "egg": "평범한 알",
+        "code": "PinkCat",
+        "food": 150,
+        "size": "XS",
+        "attack": 70,
+        "health": 70,
+        "rarity": 1,
+        "defense": 70,
+        "support": 100,
+        "goldCoin": 1000,
+        "combiRank": 1460,
+        "workSpeed": 100,
+        "meleeAttack": 70,
+        "maleProbability": 50,
+        "captureRateCorrect": 1.5
+      },
+      "tribes": [
+        {
+          "name": "잘난 척 대마왕 까부냥",
+          "type": "Tribe Boss"
+        },
+        {
+          "name": "까부냥",
+          "type": "Tribe Normal"
+        },
+        {
+          "name": "까부냥",
+          "type": "Tribe Normal"
+        }
+      ],
+      "elements": [
+        "무속성"
+      ],
+      "movement": {
+        "runSpeed": 400,
+        "walkSpeed": 60,
+        "slowWalkSpeed": 30,
+        "transportSpeed": 160,
+        "rideSprintSpeed": 550
+      },
+      "name_kor": "까부냥",
+      "spawners": [
+        {
+          "area": "1_1_plain_begginer",
+          "name": "까부냥",
+          "level": "Lv. 1–3"
+        },
+        {
+          "area": "1_3_plain_kitsunbi",
+          "name": "까부냥",
+          "level": "Lv. 3–5"
+        },
+        {
+          "area": "PvP_21_1_1",
+          "name": "까부냥",
+          "level": "Lv. 2–5"
+        },
+        {
+          "area": "PvP_21_2_1",
+          "name": "까부냥",
+          "level": "Lv. 2–5"
+        },
+        {
+          "area": "구릉 동굴, 외딴 섬의 동굴",
+          "name": "잘난 척 대마왕 까부냥",
+          "level": "Lv. 10–13"
+        },
+        {
+          "area": "구릉 동굴, 외딴 섬의 동굴",
+          "name": "까부냥",
+          "level": "Lv. 6–9"
+        },
+        {
+          "area": "sakurajima_6_2_SakuraArea",
+          "name": "까부냥",
+          "level": "Lv. 40–45"
+        },
+        {
+          "area": "Sakurajima_grade_01",
+          "name": "까부냥",
+          "level": "평범한 알"
+        },
+        {
+          "area": "Captured Cage: Grass2",
+          "name": "까부냥",
+          "level": "Lv. 10 – 20"
+        }
+      ],
+      "activeSkills": [
+        {
+          "name": "냥냥 펀치",
+          "power": 40,
+          "element": "무속성",
+          "coolTime": 1,
+          "describe": "적을 쫓아가며 양팔을 휘둘러 연속으로 펀치를 퍼붓는다.",
+          "meleeAttack": true,
+          "shootAttack": false,
+          "accumulatedValue": 0,
+          "accumulatedElement": ""
+        },
+        {
+          "name": "공기 대포",
+          "power": 25,
+          "element": "무속성",
+          "coolTime": 2,
+          "describe": "고속으로 날아가는 공기 덩어리를 발사한다.",
+          "meleeAttack": false,
+          "shootAttack": false,
+          "accumulatedValue": 0,
+          "accumulatedElement": ""
+        },
+        {
+          "name": "모래 돌풍",
+          "power": 40,
+          "element": "땅 속성",
+          "coolTime": 4,
+          "describe": "끈적거리는 진흙을 적을 향해 발사한다.",
+          "meleeAttack": false,
+          "shootAttack": false,
+          "accumulatedValue": 50,
+          "accumulatedElement": "진흙"
+        },
+        {
+          "name": "파워 샷",
+          "power": 35,
+          "element": "무속성",
+          "coolTime": 4,
+          "describe": "에너지를 모아 탄환 형태로 발사한다.",
+          "meleeAttack": false,
+          "shootAttack": false,
+          "accumulatedValue": 0,
+          "accumulatedElement": ""
+        },
+        {
+          "name": "바람의 칼날",
+          "power": 30,
+          "element": "풀 속성",
+          "coolTime": 2,
+          "describe": "적을 향해 일직선으로 날아가는 초고속 바람의 칼날을 발사한다.",
+          "meleeAttack": false,
+          "shootAttack": false,
+          "accumulatedValue": 35,
+          "accumulatedElement": "덩굴"
+        },
+        {
+          "name": "씨앗 기관총",
+          "power": 50,
+          "element": "풀 속성",
+          "coolTime": 9,
+          "describe": "딱딱한 씨앗을 많이 쏟아내며 전방의 적을 공격한다.",
+          "meleeAttack": false,
+          "shootAttack": false,
+          "accumulatedValue": 100,
+          "accumulatedElement": "덩굴"
+        },
+        {
+          "name": "팰 폭발",
+          "power": 150,
+          "element": "무속성",
+          "coolTime": 55,
+          "describe": "파괴 에너지를 모아 전방에 광범위하게 초강력 광선을 발사한다.",
+          "meleeAttack": false,
+          "shootAttack": false,
+          "accumulatedValue": 0,
+          "accumulatedElement": ""
+        }
+      ],
+      "level60Stats": {
+        "attack": 441,
+        "health": 3100,
+        "defense": 391
+      },
+      "pal_nick_kor": "#2",
+      "partnerSkill": {
+        "name": "고양이 손 빌리기",
+        "items": [
+          {
+            "name": "소지 중량 +50 (ToTrainer)",
+            "quantity": "1",
+            "probability": "100%"
+          }
+        ],
+        "level": 1,
+        "describe": "보유하고 있는 동안 까부냥이 짐을 대신 짊어져 플레이어의 소지 중량 제한이 증가한다.",
+        "needItem": "",
+        "needItemTechLevel": 0
+      },
+      "passiveSkills": [
+        "겁쟁이"
+      ],
+      "description_kor": "얼핏 보기엔 당당하지만 실은 대단한 겁쟁이다. 까부냥이 핥아준다는 건 어떤 의미에선 최고의 굴욕이다.",
+      "workSuitabilities": [
+        {
+          "work": "수작업",
+          "level": 1
+        },
+        {
+          "work": "채집",
+          "level": 1
+        },
+        {
+          "work": "채굴",
+          "level": 1
+        },
+        {
+          "work": "운반",
+          "level": 1
+        }
+      ]
+    }
+  ]
+} 

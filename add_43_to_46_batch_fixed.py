@@ -1,0 +1,217 @@
+import csv
+import re
+
+# 현재 CSV 파일 읽기
+input_file = 'complete_1_to_42_pals.csv'
+output_file = 'complete_1_to_46_pals.csv'
+
+# 기존 데이터 로드
+existing_data = []
+with open(input_file, 'r', encoding='utf-8') as f:
+    reader = csv.DictReader(f)
+    fieldnames = reader.fieldnames
+    for row in reader:
+        existing_data.append(row)
+
+# 43,49,50,51번 팰 데이터 (정확한 필드명 사용)
+new_pals = [
+    {
+        "id": "43",
+        "name_kor": "도도롱",
+        "description_kor": "한없이 늘어질 때는 모든 반응이 둔해진다. 28번의 자상을 입게 되더라도 다음 날이 되어서야 이를 깨닫고 목숨을 잃는다.",
+        "elements": "땅|물",
+        "partnerSkill_name": "토양 개선",
+        "partnerSkill_describe": "보유하고 있는 동안 땅 속성 팰의 공격력이 증가한다. 가축 목장에 배치하면 고급 팰 기름을 떨어뜨리기도 한다.",
+        "partnerSkill_needItem": "",
+        "partnerSkill_needItemTechLevel": "0",
+        "partnerSkill_level": "1",
+        "stats_size": "M",
+        "stats_rarity": "4",
+        "stats_health": "100",
+        "stats_food": "4",
+        "stats_meleeAttack": "100",
+        "stats_attack": "70",
+        "stats_defense": "95",
+        "stats_workSpeed": "100",
+        "stats_support": "100",
+        "stats_captureRateCorrect": "1",
+        "stats_maleProbability": "50",
+        "stats_combiRank": "895",
+        "stats_goldCoin": "4690",
+        "stats_egg": "거친 느낌의 알",
+        "stats_code": "LazyCatfish",
+        "movement_slowWalkSpeed": "100",
+        "movement_walkSpeed": "150",
+        "movement_runSpeed": "450",
+        "movement_rideSprintSpeed": "600",
+        "movement_transportSpeed": "300",
+        "level60_health": "4075-5050",
+        "level60_attack": "441-543",
+        "level60_defense": "513-652",
+        "activeSkills": "모래 돌풍(땅속성, 40파워, 4초) | 아쿠아 샷(물속성, 40파워, 4초) | 바위 폭발(땅속성, 55파워, 10초) | 버블 샷(물속성, 65파워, 13초) | 물폭탄(물속성, 100파워, 30초) | 바위 창(땅속성, 150파워, 55초) | 하이드로 스트림(물속성, 150파워, 55초)",
+        "activeSkills_count": "7",
+        "passiveSkills": "",
+        "passiveSkills_count": "0",
+        "drops": "도도롱의 살코기(2, 100%) | 고급 팰 기름(1, 100%)",
+        "drops_count": "2",
+        "workSuitabilities": "관개(LV.1) | 채굴(LV.2) | 운반(LV.1) | 목장(LV.1)",
+        "workSuitabilities_count": "4",
+        "tribes": "내일부터 정말 열심히 할 도도롱 | 도도롱",
+        "tribes_count": "2",
+        "spawners": "도도롱(Lv. 17-19, 계곡의 동굴) | 도도롱(Lv. 26-30, 3_3_volcano_1)",
+        "spawners_count": "2"
+    },
+    {
+        "id": "49",
+        "name_kor": "고릴레이지",
+        "description_kor": "지면을 두드리는 리듬으로 동료와 의사소통한다. 리듬에 상응하는 의미는 무리마다 다른데 그 분류는 지금도 명확하지 않다.",
+        "elements": "무속성",
+        "partnerSkill_name": "풀 파워 고릴라 모드",
+        "partnerSkill_describe": "발동하면 야성의 힘을 해방해 일정 시간 고릴레이지의 공격력이 증가한다.",
+        "partnerSkill_needItem": "",
+        "partnerSkill_needItemTechLevel": "0",
+        "partnerSkill_level": "1",
+        "stats_size": "S",
+        "stats_rarity": "5",
+        "stats_health": "90",
+        "stats_food": "3",
+        "stats_meleeAttack": "110",
+        "stats_attack": "95",
+        "stats_defense": "90",
+        "stats_workSpeed": "100",
+        "stats_support": "100",
+        "stats_captureRateCorrect": "1",
+        "stats_maleProbability": "50",
+        "stats_combiRank": "1040",
+        "stats_goldCoin": "2010",
+        "stats_egg": "평범한 대형 알",
+        "stats_code": "Gorilla",
+        "movement_slowWalkSpeed": "66",
+        "movement_walkSpeed": "100",
+        "movement_runSpeed": "550",
+        "movement_rideSprintSpeed": "720",
+        "movement_transportSpeed": "250",
+        "level60_health": "3750-4627",
+        "level60_attack": "563-702",
+        "level60_defense": "488-620",
+        "activeSkills": "모래 돌풍(땅속성, 40파워, 4초) | 파워 샷(무속성, 35파워, 4초) | 고릴라운드 콤보(무속성, 85파워, 14초) | 바위 폭발(땅속성, 55파워, 10초) | 씨앗 기관총(풀속성, 50파워, 9초) | 파워 폭탄(무속성, 70파워, 15초) | 팰 폭발(무속성, 150파워, 55초)",
+        "activeSkills_count": "7",
+        "passiveSkills": "난폭함",
+        "passiveSkills_count": "1",
+        "drops": "가죽(1-2, 100%) | 뼈(1, 100%)",
+        "drops_count": "2",
+        "workSuitabilities": "수작업(LV.1) | 벌목(LV.2) | 운반(LV.3)",
+        "workSuitabilities_count": "3",
+        "tribes": "빼어난 싸움꾼 고릴레이지 | 고릴레이지 | 고릴가이아",
+        "tribes_count": "3",
+        "spawners": "고릴레이지(Lv. 22-24, 2_1_forest_3) | 고릴레이지(Lv. 22-25, 시냇물 동굴)",
+        "spawners_count": "2"
+    },
+    {
+        "id": "50",
+        "name_kor": "비나이트",
+        "description_kor": "퀸비나을 충실히 따르는 하인. 여왕에게 해를 끼치는 자를 철저히 배제한다. 끝내 자폭을 해서라도 여왕을 지켜낸다.",
+        "elements": "풀속성",
+        "partnerSkill_name": "일벌",
+        "partnerSkill_describe": "가축 목장에 배치하면 벌꿀을 떨어뜨리기도 한다. 보유하고 있는 동안 퀸비나의 스테이터스가 상승한다.",
+        "partnerSkill_needItem": "",
+        "partnerSkill_needItemTechLevel": "0",
+        "partnerSkill_level": "1",
+        "stats_size": "M",
+        "stats_rarity": "4",
+        "stats_health": "80",
+        "stats_food": "3",
+        "stats_meleeAttack": "100",
+        "stats_attack": "90",
+        "stats_defense": "90",
+        "stats_workSpeed": "100",
+        "stats_support": "100",
+        "stats_captureRateCorrect": "1",
+        "stats_maleProbability": "10",
+        "stats_combiRank": "1070",
+        "stats_goldCoin": "1880",
+        "stats_egg": "신록의 알",
+        "stats_code": "SoldierBee",
+        "movement_slowWalkSpeed": "125",
+        "movement_walkSpeed": "250",
+        "movement_runSpeed": "450",
+        "movement_rideSprintSpeed": "550",
+        "movement_transportSpeed": "350",
+        "level60_health": "3425-4205",
+        "level60_attack": "538-670",
+        "level60_defense": "488-620",
+        "activeSkills": "공기 대포(무속성, 25파워, 2초) | 바람의 칼날(풀속성, 30파워, 2초) | 바늘 창(풀속성, 55파워, 7초) | 벌의 침묵(풀속성, 250파워, 55초) | 독 사격(어둠속성, 30파워, 2초) | 산성비(물속성, 80파워, 18초) | 초록 폭풍(풀속성, 80파워, 18초) | 태양 폭발(풀속성, 150파워, 55초)",
+        "activeSkills_count": "8",
+        "passiveSkills": "",
+        "passiveSkills_count": "0",
+        "drops": "벌꿀(1-2, 100%)",
+        "drops_count": "1",
+        "workSuitabilities": "파종(LV.1) | 수작업(LV.1) | 채집(LV.1) | 벌목(LV.1) | 제약(LV.1) | 운반(LV.2) | 목장(LV.1)",
+        "workSuitabilities_count": "7",
+        "tribes": "수비대장 비나이트 | 비나이트",
+        "tribes_count": "2",
+        "spawners": "비나이트(Lv. 20-22, 2_1_forest_3) | 비나이트(Lv. 20-23, 시냇물 동굴)",
+        "spawners_count": "2"
+    },
+    {
+        "id": "51",
+        "name_kor": "퀸비나",
+        "description_kor": "비나이트을 총괄하는 선택받은 여왕. 위대한 여왕을 위해 일한다는 기쁨으로 죽을 때까지 일하는 하인이 끊이지 않는다.",
+        "elements": "풀속성",
+        "partnerSkill_name": "여왕벌의 통솔",
+        "partnerSkill_describe": "함께 싸우는 동안 보유하고 있는 비나이트의 개체수가 많을수록 스테이터스가 상승한다.",
+        "partnerSkill_needItem": "",
+        "partnerSkill_needItemTechLevel": "0",
+        "partnerSkill_level": "1",
+        "stats_size": "L",
+        "stats_rarity": "8",
+        "stats_health": "90",
+        "stats_food": "7",
+        "stats_meleeAttack": "100",
+        "stats_attack": "105",
+        "stats_defense": "100",
+        "stats_workSpeed": "100",
+        "stats_support": "100",
+        "stats_captureRateCorrect": "1",
+        "stats_maleProbability": "10",
+        "stats_combiRank": "330",
+        "stats_goldCoin": "6830",
+        "stats_egg": "신록의 거대한 알",
+        "stats_code": "QueenBee",
+        "movement_slowWalkSpeed": "150",
+        "movement_walkSpeed": "250",
+        "movement_runSpeed": "450",
+        "movement_rideSprintSpeed": "550",
+        "movement_transportSpeed": "350",
+        "level60_health": "3750-4627",
+        "level60_attack": "611-765",
+        "level60_defense": "537-683",
+        "activeSkills": "공기 대포(무속성, 25파워, 2초) | 바람의 칼날(풀속성, 30파워, 2초) | 독 사격(어둠속성, 30파워, 2초) | 스피닝 스태프(풀속성, 70파워, 9초) | 초록 폭풍(풀속성, 80파워, 18초) | 가시덩굴(풀속성, 95파워, 25초) | 태양 폭발(풀속성, 150파워, 55초)",
+        "activeSkills_count": "7",
+        "passiveSkills": "",
+        "passiveSkills_count": "0",
+        "drops": "벌꿀(5, 100%) | 퀸비나의 지팡이(1, 3%)",
+        "drops_count": "2",
+        "workSuitabilities": "파종(LV.2) | 수작업(LV.2) | 채집(LV.2) | 벌목(LV.1) | 제약(LV.2)",
+        "workSuitabilities_count": "5",
+        "tribes": "대군의 여왕 퀸비나 | 퀸비나",
+        "tribes_count": "2",
+        "spawners": "퀸비나(Lv. 28-29, 2_1_forest_3)",
+        "spawners_count": "1"
+    }
+]
+
+# 새로운 팰들을 기존 데이터에 추가
+all_data = existing_data + new_pals
+
+# CSV 파일 저장
+with open(output_file, 'w', encoding='utf-8', newline='') as f:
+    writer = csv.DictWriter(f, fieldnames=fieldnames)
+    writer.writeheader()
+    writer.writerows(all_data)
+
+print(f"✅ 완료! {output_file} 저장됨")
+print(f"총 {len(all_data)}개 팰")
+print(f"- 기존 1-42번: {len(existing_data)}개")
+print(f"- 새로 추가 43,49,50,51번: {len(new_pals)}개")
+print(f"컬럼 수: {len(fieldnames)}") 

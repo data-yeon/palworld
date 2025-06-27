@@ -1,0 +1,30 @@
+id,name_kor,description_kor,elements,size,rarity,health,food,melee_attack,attack,defense,work_speed,support,capture_rate_correct,male_probability,combi_rank,gold_coin,egg,code,slow_walk_speed,walk_speed,run_speed,ride_sprint_speed,transport_speed,level60_health,level60_attack,level60_defense,partner_skill_name,partner_skill_describe,partner_skill_need_item,partner_skill_need_item_tech_level,work_kindling,work_watering,work_seeding,work_generating_electricity,work_handiwork,work_gathering,work_lumbering,work_mining,work_medicine_production,work_cooling,work_transporting,work_farming,active_skills_required_level_1,active_skills_name_1,active_skills_element_1,active_skills_cool_time_1,active_skills_power_1,active_skills_describe_1,active_skills_required_level_2,active_skills_name_2,active_skills_element_2,active_skills_cool_time_2,active_skills_power_2,active_skills_describe_2,active_skills_required_level_3,active_skills_name_3,active_skills_element_3,active_skills_cool_time_3,active_skills_power_3,active_skills_describe_3,active_skills_required_level_4,active_skills_name_4,active_skills_element_4,active_skills_cool_time_4,active_skills_power_4,active_skills_describe_4,active_skills_required_level_5,active_skills_name_5,active_skills_element_5,active_skills_cool_time_5,active_skills_power_5,active_skills_describe_5,active_skills_required_level_6,active_skills_name_6,active_skills_element_6,active_skills_cool_time_6,active_skills_power_6,active_skills_describe_6,active_skills_required_level_7,active_skills_name_7,active_skills_element_7,active_skills_cool_time_7,active_skills_power_7,active_skills_describe_7,drops,drops_probability,drops_count
+11,펭킹,"사실 [펭키](https://paldb.cc/ko/Pengullet) 와(과) 아무 연관도 없는 종.
+멋대로 상전 대접을 받은 터라
+일단 열심히 뻗대고 보고 있다.",물|얼음,L,6,95,8,70,95,95,100,100,1,50,,5410,https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_PalEgg_Water_01.webp,CaptainPenguin,50,50,450,600,280,3912 – 4838,563 – 702,513 – 652,용감한 바다의 전사 Lv.1,"![](https://cdn.paldb.cc/image/Pal/Texture/UI/InGame/T_icon_skill_pal_014.webp)
+
+함께 싸우는 동안 화염 속성 팰을 쓰러뜨렸을 때
+드롭 아이템 획득량이 증가한다.",,,,,,,,,,,,,,,1,아쿠아 샷,물,,40,축적치:젖음,7,빙산,얼음,,70,축적치:빙결,15,캡틴 슬라이딩,얼음,,70,축적치:빙결,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+11B,펭키드,"수중 사냥에 도움이 되도록 전기의 힘을 얻어 색이 변화했으며
+그 결과 [펭키](https://paldb.cc/ko/Pengullet) 의 충성을 잃고 말았다.
+그러나 어째서인지는 몰라도
+이번에는 [뎅키](https://paldb.cc/ko/Pengullet_Lux) 의 충성을 얻게 되었다.",물|번개,L,7,100,0,100,100,100,,,,,,,,,,,,,,,,,불굴의 전격 수장 Lv.1,"![](https://cdn.paldb.cc/image/Pal/Texture/UI/InGame/T_icon_skill_pal_014.webp)
+
+함께 싸우는 동안 물 속성 팰을 쓰러뜨렸을 때
+드롭 아이템 획득량이 증가한다.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+12,찌릿도치,"충격을 받으면 모았던 전기를 방출한다.
+그 전압은 1,000만 볼트가 넘는다.
+던지면 어설픈 중화기보다 더 위험하다.",번개,XS,1,70,0,70,75,70,,,,,,,,,,,,,,,,,찌르르 폭탄 Lv.1,"![](https://cdn.paldb.cc/image/Pal/Texture/UI/InGame/T_icon_skill_pal_002.webp)
+
+발동하면 [찌릿도치](https://paldb.cc/ko/Jolthog) 을(를) 손에 장착하며
+적에게 던져 착탄할 시 번개 폭발을 일으킨다.
+
+[![](https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Essential_SkillUnlock_Gloves.webp)](https://paldb.cc/ko/Jolthogs_Gloves)",,8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+12B,코치도치,"충격을 받으면 모았던 냉기를 방출한다.
+방사상에 퍼진 냉기는 대기를 꽁꽁 얼려
+습격해온 상대의 몸을 꿰뚫는다.",얼음,XS,2,70,0,70,75,80,,,,,,,,,,,,,,,,,딱딱 폭탄 Lv.1,"![](https://cdn.paldb.cc/image/Pal/Texture/UI/InGame/T_icon_skill_pal_002.webp)
+
+발동하면 [코치도치](https://paldb.cc/ko/Jolthog_Cryst) 을(를) 손에 장착하며
+적에게 던져 착탄할 시 얼음 폭발을 일으킨다.
+
+[![](https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Essential_SkillUnlock_Gloves.webp)](https://paldb.cc/ko/Jolthog_Crysts_Gloves)",,11,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0

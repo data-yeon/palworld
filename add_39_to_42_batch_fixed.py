@@ -1,0 +1,217 @@
+import csv
+import re
+
+# 현재 CSV 파일 읽기
+input_file = 'complete_1_to_38_pals_corrected.csv'
+output_file = 'complete_1_to_42_pals.csv'
+
+# 기존 데이터 로드
+existing_data = []
+with open(input_file, 'r', encoding='utf-8') as f:
+    reader = csv.DictReader(f)
+    fieldnames = reader.fieldnames
+    for row in reader:
+        existing_data.append(row)
+
+# 39-42번 팰 데이터 (정확한 필드명 사용)
+new_pals = [
+    {
+        "id": "39",
+        "name_kor": "핑토",
+        "description_kor": "항상 방긋방긋 웃는 얼굴로 지낸다. 가끔 까부냥의 장난으로 촉수가 묶이기도 한다. 그리고 그때만큼은 귀신의 형상으로 변하게 된다고 한다.",
+        "elements": "무속성",
+        "partnerSkill_name": "야무진 손재주",
+        "partnerSkill_describe": "보유하고 있는 동안 무속성 팰의 공격력이 증가한다. 핑토가 무기 제작대나 무기 공장 등에서 일할 때 작업 효율이 향상된다.",
+        "partnerSkill_needItem": "",
+        "partnerSkill_needItemTechLevel": "0",
+        "partnerSkill_level": "1",
+        "stats_size": "XS",
+        "stats_rarity": "1",
+        "stats_health": "75",
+        "stats_food": "150",
+        "stats_meleeAttack": "100",
+        "stats_attack": "65",
+        "stats_defense": "70",
+        "stats_workSpeed": "100",
+        "stats_support": "100",
+        "stats_captureRateCorrect": "1",
+        "stats_maleProbability": "50",
+        "stats_combiRank": "1310",
+        "stats_goldCoin": "1160",
+        "stats_egg": "평범한 알",
+        "stats_code": "PinkRabbit",
+        "movement_slowWalkSpeed": "50",
+        "movement_walkSpeed": "100",
+        "movement_runSpeed": "245",
+        "movement_rideSprintSpeed": "350",
+        "movement_transportSpeed": "172",
+        "level60_health": "3262–3993",
+        "level60_attack": "416–511",
+        "level60_defense": "391–493",
+        "activeSkills": "공기 대포(무속성, 25파워, 2초) | 파워 샷(무속성, 35파워, 4초) | 얼음 미사일(얼음 속성, 30파워, 3초) | 눈보라 스파이크(얼음 속성, 130파워, 45초) | 파워 폭탄(무속성, 70파워, 15초) | 빙산(얼음 속성, 70파워, 15초) | 팰 폭발(무속성, 150파워, 55초)",
+        "activeSkills_count": "7",
+        "passiveSkills": "",
+        "passiveSkills_count": "0",
+        "drops": "가죽(1, 100%) | 예쁜 꽃(1, 5%) | 핑토의 리본(1, 50%)",
+        "drops_count": "3",
+        "workSuitabilities": "수작업(LV.1) | 채집(LV.1) | 운반(LV.1)",
+        "workSuitabilities_count": "3",
+        "tribes": "반짝이는 미소 핑토 | 핑토",
+        "tribes_count": "2",
+        "spawners": "핑토(Lv. 13–14, 1_7_plain_Pekodon) | 핑토(Lv. 7–11, 1_13_plain_PinkRabbit)",
+        "spawners_count": "2"
+    },
+    {
+        "id": "40",
+        "name_kor": "헬고트",
+        "description_kor": "밤에 사냥감을 잡아 자기 영역에 돌아온다. 잡힌 팰이 그 후 어떤 일을 당할지는 불 보듯 뻔하다.",
+        "elements": "화염 속성|어둠 속성",
+        "partnerSkill_name": "화염 발톱의 사냥꾼",
+        "partnerSkill_describe": "발동하면 목표로 삼은 적을 향해 높은 위력의 지옥불 할퀴기로 공격한다.",
+        "partnerSkill_needItem": "",
+        "partnerSkill_needItemTechLevel": "0",
+        "partnerSkill_level": "1",
+        "stats_size": "M",
+        "stats_rarity": "4",
+        "stats_health": "95",
+        "stats_food": "300",
+        "stats_meleeAttack": "150",
+        "stats_attack": "100",
+        "stats_defense": "85",
+        "stats_workSpeed": "100",
+        "stats_support": "100",
+        "stats_captureRateCorrect": "1",
+        "stats_maleProbability": "50",
+        "stats_combiRank": "590",
+        "stats_goldCoin": "4780",
+        "stats_egg": "열기 나는 알",
+        "stats_code": "Baphomet",
+        "movement_slowWalkSpeed": "80",
+        "movement_walkSpeed": "160",
+        "movement_runSpeed": "700",
+        "movement_rideSprintSpeed": "960",
+        "movement_transportSpeed": "320",
+        "level60_health": "3912–4838",
+        "level60_attack": "587–733",
+        "level60_defense": "464–588",
+        "activeSkills": "파이어 샷(화염 속성, 30파워, 2초) | 스피릿 파이어(화염 속성, 45파워, 7초) | 불화살(화염 속성, 55파워, 10초) | 지옥불 할퀴기(화염 속성, 70파워, 10초) | 그림자 폭발(어둠 속성, 55파워, 10초) | 화염구(화염 속성, 150파워, 55초) | 인페르노(화염 속성, 120파워, 40초)",
+        "activeSkills_count": "7",
+        "passiveSkills": "",
+        "passiveSkills_count": "0",
+        "drops": "뿔(1, 100%) | 가죽(1, 100%)",
+        "drops_count": "2",
+        "workSuitabilities": "불 피우기(LV.1) | 수작업(LV.2) | 채굴(LV.1) | 운반(LV.2)",
+        "workSuitabilities_count": "4",
+        "tribes": "황야의 하이에나 헬고트 | 헬고트",
+        "tribes_count": "2",
+        "spawners": "헬고트(Lv. 27–30, 3_2_volcano_1) | 헬고트(Lv. 28–32, 3_3_volcano_1)",
+        "spawners_count": "2"
+    },
+    {
+        "id": "41",
+        "name_kor": "귀요비",
+        "description_kor": "가루를 흡입하면 승천하는 듯한 쾌락을 안겨준다. 단속을 강화하자는 움직임도 있지만 팰 애호 단체의 반대로 진척이 없다.",
+        "elements": "풀 속성",
+        "partnerSkill_name": "수수께끼의 비늘 가루",
+        "partnerSkill_describe": "발동하면 목표로 삼은 적을 향해 독 안개로 공격한다.",
+        "partnerSkill_needItem": "",
+        "partnerSkill_needItemTechLevel": "0",
+        "partnerSkill_level": "1",
+        "stats_size": "M",
+        "stats_rarity": "4",
+        "stats_health": "70",
+        "stats_food": "225",
+        "stats_meleeAttack": "100",
+        "stats_attack": "80",
+        "stats_defense": "80",
+        "stats_workSpeed": "100",
+        "stats_support": "100",
+        "stats_captureRateCorrect": "1",
+        "stats_maleProbability": "50",
+        "stats_combiRank": "490",
+        "stats_goldCoin": "5700",
+        "stats_egg": "신록의 알",
+        "stats_code": "CuteButterfly",
+        "movement_slowWalkSpeed": "30",
+        "movement_walkSpeed": "150",
+        "movement_runSpeed": "550",
+        "movement_rideSprintSpeed": "700",
+        "movement_transportSpeed": "350",
+        "level60_health": "3100–3782",
+        "level60_attack": "490–607",
+        "level60_defense": "440–557",
+        "activeSkills": "공기 대포(무속성, 25파워, 2초) | 바람의 칼날(풀 속성, 30파워, 2초) | 독 안개(어둠 속성, 0파워, 30초) | 모래 폭풍(땅 속성, 80파워, 18초) | 씨앗 지뢰(풀 속성, 65파워, 13초) | 초록 폭풍(풀 속성, 80파워, 18초) | 태양 폭발(풀 속성, 150파워, 55초)",
+        "activeSkills_count": "7",
+        "passiveSkills": "",
+        "passiveSkills_count": "0",
+        "drops": "벌꿀(1, 100%) | 양상추 씨(1, 20%) | 밀 씨(1, 20%)",
+        "drops_count": "3",
+        "workSuitabilities": "파종(LV.2) | 제약(LV.1)",
+        "workSuitabilities_count": "2",
+        "tribes": "꿈꾸는 나비의 춤 귀요비 | 귀요비",
+        "tribes_count": "2",
+        "spawners": "귀요비(Lv. 18–20, 2_1_forest_1) | 꿈꾸는 나비의 춤 귀요비(Lv. 27–29, 시냇물 동굴)",
+        "spawners_count": "2"
+    },
+    {
+        "id": "42",
+        "name_kor": "불페르노",
+        "description_kor": "먼 옛날엔 육식 팰에게 사냥당하기 일쑤였다. 그 부조리에 울부짖은 불페르노 무리의 분노는 활활 타오르며 대대로 이어졌다.",
+        "elements": "화염 속성",
+        "partnerSkill_name": "따끈따끈 육체",
+        "partnerSkill_describe": "등에 타고 이동할 수 있다. 탑승 중에는 따뜻하여 추위를 느끼지 않게 된다.",
+        "partnerSkill_needItem": "기술16",
+        "partnerSkill_needItemTechLevel": "16",
+        "partnerSkill_level": "1",
+        "stats_size": "M",
+        "stats_rarity": "4",
+        "stats_health": "85",
+        "stats_food": "350",
+        "stats_meleeAttack": "100",
+        "stats_attack": "95",
+        "stats_defense": "95",
+        "stats_workSpeed": "100",
+        "stats_support": "100",
+        "stats_captureRateCorrect": "1",
+        "stats_maleProbability": "50",
+        "stats_combiRank": "790",
+        "stats_goldCoin": "3520",
+        "stats_egg": "열기 나는 알",
+        "stats_code": "FlameBuffalo",
+        "movement_slowWalkSpeed": "87",
+        "movement_walkSpeed": "87",
+        "movement_runSpeed": "700",
+        "movement_rideSprintSpeed": "1050",
+        "movement_transportSpeed": "343",
+        "level60_health": "3587–4416",
+        "level60_attack": "563–702",
+        "level60_defense": "513–652",
+        "activeSkills": "파이어 샷(화염 속성, 30파워, 2초) | 불타는 뿔(화염 속성, 50파워, 9초) | 스피릿 파이어(화염 속성, 45파워, 7초) | 불화살(화염 속성, 55파워, 10초) | 파이어 브레스(화염 속성, 70파워, 15초) | 인페르노(화염 속성, 120파워, 40초) | 화염구(화염 속성, 150파워, 55초)",
+        "activeSkills_count": "7",
+        "passiveSkills": "",
+        "passiveSkills_count": "0",
+        "drops": "뿔(1, 100%) | 발화 기관(2–3, 100%)",
+        "drops_count": "2",
+        "workSuitabilities": "불 피우기(LV.2) | 벌목(LV.1)",
+        "workSuitabilities_count": "2",
+        "tribes": "활활 타오르는 뿔 달린 야수 불페르노 | 불페르노",
+        "tribes_count": "2",
+        "spawners": "불페르노(Lv. 9–13, 1_6_plain_Kirin) | 불페르노(Lv. 36–39, snow_5_2_SnowGrass)",
+        "spawners_count": "2"
+    }
+]
+
+# 기존 데이터에 새 팰 추가
+all_data = existing_data + new_pals
+
+# 새 CSV 파일에 저장
+with open(output_file, 'w', newline='', encoding='utf-8') as f:
+    writer = csv.DictWriter(f, fieldnames=fieldnames)
+    writer.writeheader()
+    writer.writerows(all_data)
+
+print(f"✅ 완료! {output_file} 저장됨")
+print(f"총 {len(all_data)}개 팰")
+print(f"- 기존 1-38번: {len(existing_data)}개")
+print(f"- 새로 추가 39-42번: {len(new_pals)}개")
+print(f"컬럼 수: {len(fieldnames)}") 
