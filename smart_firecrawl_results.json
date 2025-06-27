@@ -1,0 +1,82 @@
+[
+  {
+    "id": "5B",
+    "name": "아이호",
+    "english_name": "Foxparks_Cryst",
+    "url": "https://paldb.cc/ko/Foxparks_Cryst",
+    "status": "found",
+    "type": "B variant"
+  },
+  {
+    "id": "6B",
+    "name": "적부리",
+    "english_name": "Fuack_Noct",
+    "url": "https://paldb.cc/ko/Fuack_Noct",
+    "status": "found",
+    "type": "B variant"
+  },
+  {
+    "id": "10B",
+    "name": "뎅키",
+    "english_name": "Pengullet_Cryst",
+    "url": "https://paldb.cc/ko/Pengullet_Cryst",
+    "status": "found",
+    "type": "B variant"
+  },
+  {
+    "id": "11B",
+    "name": "펭키드",
+    "english_name": "Penking_Lux",
+    "url": "https://paldb.cc/ko/Penking_Lux",
+    "status": "found",
+    "type": "B variant"
+  },
+  {
+    "id": "12B",
+    "name": "코치도치",
+    "english_name": "Jolthog_Cryst",
+    "url": "https://paldb.cc/ko/Jolthog_Cryst",
+    "status": "found",
+    "type": "B variant"
+  },
+  {
+    "id": "13B",
+    "name": "초롱이",
+    "english_name": "Gumoss_Lux",
+    "url": "https://paldb.cc/ko/Gumoss_Lux",
+    "status": "found",
+    "type": "B variant"
+  },
+  {
+    "id": "46B",
+    "name": "얼서니",
+    "english_name": "Loupmoon_Cryst",
+    "url": "https://paldb.cc/ko/Loupmoon_Cryst",
+    "status": "newly_found",
+    "type": "B variant"
+  },
+  {
+    "id": "48B",
+    "name": "산도로",
+    "english_name": "Robinquill_Terra",
+    "url": "https://paldb.cc/ko/Robinquill_Terra",
+    "status": "newly_found",
+    "type": "B variant"
+  },
+  {
+    "id": "49B",
+    "name": "고릴가이아",
+    "english_name": "Gorirat_Terra",
+    "url": "https://paldb.cc/ko/Gorirat_Terra",
+    "status": "newly_found",
+    "type": "B variant"
+  },
+  {
+    "id": "55B",
+    "name": "천도뇽",
+    "english_name": "Chillet_Ignis",
+    "url": "https://paldb.cc/ko/Chillet_Ignis",
+    "status": "newly_found",
+    "type": "B variant"
+  }
+]

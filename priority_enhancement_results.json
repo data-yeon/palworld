@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1",
+    "url": "https://paldb.cc/ko/Lamball",
+    "passiveSkills_new": "",
+    "passiveSkills_count_new": 0,
+    "activeSkills_enhanced": "[{\"level\": \"1\", \"name\": \"데굴데굴 솜사탕\", \"element\": \"무속성\", \"power\": \"35\", \"cooltime\": \"1\"}, {\"level\": \"7\", \"name\": \"공기 대포\", \"element\": \"무속성\", \"power\": \"25\", \"cooltime\": \"2\"}, {\"level\": \"15\", \"name\": \"파워 샷\", \"element\": \"무속성\", \"power\": \"35\", \"cooltime\": \"4\"}, {\"level\": \"22\", \"name\": \"자폭\", \"element\": \"무속성\", \"power\": \"230\", \"cooltime\": \"55\"}, {\"level\": \"30\", \"name\": \"번개 구체\", \"element\": \"번개\", \"power\": \"50\", \"cooltime\": \"9\"}, {\"level\": \"40\", \"name\": \"파워 폭탄\", \"element\": \"무속성\", \"power\": \"70\", \"cooltime\": \"15\"}, {\"level\": \"50\", \"name\": \"팰 폭발\", \"element\": \"무속성\", \"power\": \"150\", \"cooltime\": \"55\"}]",
+    "activeSkills_count_new": 7
+  },
+  {
+    "id": "2",
+    "url": "https://paldb.cc/ko/Cattiva",
+    "passiveSkills_new": "",
+    "passiveSkills_count_new": 0,
+    "activeSkills_enhanced": "[{\"level\": \"1\", \"name\": \"냥냥 펀치\", \"element\": \"무속성\", \"power\": \"40\", \"cooltime\": \"1\"}, {\"level\": \"7\", \"name\": \"공기 대포\", \"element\": \"무속성\", \"power\": \"25\", \"cooltime\": \"2\"}, {\"level\": \"15\", \"name\": \"모래 돌풍\", \"element\": \"땅\", \"power\": \"40\", \"cooltime\": \"4\"}, {\"level\": \"22\", \"name\": \"파워 샷\", \"element\": \"무속성\", \"power\": \"35\", \"cooltime\": \"4\"}, {\"level\": \"30\", \"name\": \"바람의 칼날\", \"element\": \"풀\", \"power\": \"30\", \"cooltime\": \"2\"}, {\"level\": \"40\", \"name\": \"씨앗 기관총\", \"element\": \"풀\", \"power\": \"50\", \"cooltime\": \"9\"}, {\"level\": \"50\", \"name\": \"팰 폭발\", \"element\": \"무속성\", \"power\": \"150\", \"cooltime\": \"55\"}]",
+    "activeSkills_count_new": 7
+  },
+  {
+    "id": "3",
+    "url": "https://paldb.cc/ko/Chikipi",
+    "passiveSkills_new": "",
+    "passiveSkills_count_new": 0,
+    "activeSkills_enhanced": "[{\"level\": \"1\", \"name\": \"치킨 태클\", \"element\": \"무속성\", \"power\": \"30\", \"cooltime\": \"1\"}, {\"level\": \"7\", \"name\": \"공기 대포\", \"element\": \"무속성\", \"power\": \"25\", \"cooltime\": \"2\"}, {\"level\": \"15\", \"name\": \"파워 샷\", \"element\": \"무속성\", \"power\": \"35\", \"cooltime\": \"4\"}, {\"level\": \"22\", \"name\": \"자폭\", \"element\": \"무속성\", \"power\": \"230\", \"cooltime\": \"55\"}, {\"level\": \"30\", \"name\": \"초록 폭풍\", \"element\": \"풀\", \"power\": \"80\", \"cooltime\": \"18\"}, {\"level\": \"40\", \"name\": \"모래 폭풍\", \"element\": \"땅\", \"power\": \"80\", \"cooltime\": \"18\"}, {\"level\": \"50\", \"name\": \"화염 폭풍\", \"element\": \"화염\", \"power\": \"80\", \"cooltime\": \"18\"}]",
+    "activeSkills_count_new": 7
+  },
+  {
+    "id": "4",
+    "url": "https://paldb.cc/ko/Lifmunk",
+    "passiveSkills_new": "",
+    "passiveSkills_count_new": 0,
+    "activeSkills_enhanced": "[{\"level\": \"1\", \"name\": \"바람의 칼날\", \"element\": \"풀\", \"power\": \"30\", \"cooltime\": \"2\"}, {\"level\": \"7\", \"name\": \"공기 대포\", \"element\": \"무속성\", \"power\": \"25\", \"cooltime\": \"2\"}, {\"level\": \"15\", \"name\": \"파워 샷\", \"element\": \"무속성\", \"power\": \"35\", \"cooltime\": \"4\"}, {\"level\": \"22\", \"name\": \"씨앗 기관총\", \"element\": \"풀\", \"power\": \"50\", \"cooltime\": \"9\"}, {\"level\": \"30\", \"name\": \"파워 폭탄\", \"element\": \"무속성\", \"power\": \"70\", \"cooltime\": \"15\"}, {\"level\": \"40\", \"name\": \"가시덩굴\", \"element\": \"풀\", \"power\": \"95\", \"cooltime\": \"25\"}, {\"level\": \"50\", \"name\": \"태양 폭발\", \"element\": \"풀\", \"power\": \"150\", \"cooltime\": \"55\"}]",
+    "activeSkills_count_new": 7
+  },
+  {
+    "id": "5",
+    "url": "https://paldb.cc/ko/Foxparks",
+    "passiveSkills_new": "",
+    "passiveSkills_count_new": 0,
+    "activeSkills_enhanced": "[{\"level\": \"1\", \"name\": \"파이어 샷\", \"element\": \"화염\", \"power\": \"30\", \"cooltime\": \"2\"}, {\"level\": \"7\", \"name\": \"모래 돌풍\", \"element\": \"땅\", \"power\": \"40\", \"cooltime\": \"4\"}, {\"level\": \"15\", \"name\": \"스피릿 파이어\", \"element\": \"화염\", \"power\": \"45\", \"cooltime\": \"7\"}, {\"level\": \"22\", \"name\": \"불화살\", \"element\": \"화염\", \"power\": \"55\", \"cooltime\": \"10\"}, {\"level\": \"30\", \"name\": \"파이어 브레스\", \"element\": \"화염\", \"power\": \"70\", \"cooltime\": \"15\"}, {\"level\": \"40\", \"name\": \"유령의 불꽃\", \"element\": \"어둠\", \"power\": \"75\", \"cooltime\": \"16\"}, {\"level\": \"50\", \"name\": \"화염구\", \"element\": \"화염\", \"power\": \"150\", \"cooltime\": \"55\"}]",
+    "activeSkills_count_new": 7
+  },
+  {
+    "id": "5B",
+    "url": "https://paldb.cc/ko/Foxparks_Cryst",
+    "passiveSkills_new": "",
+    "passiveSkills_count_new": 0,
+    "activeSkills_enhanced": "[{\"level\": \"1\", \"name\": \"얼음 미사일\", \"element\": \"얼음\", \"power\": \"30\", \"cooltime\": \"3\"}, {\"level\": \"7\", \"name\": \"워터 제트\", \"element\": \"물\", \"power\": \"30\", \"cooltime\": \"2\"}, {\"level\": \"15\", \"name\": \"얼음 칼날\", \"element\": \"얼음\", \"power\": \"55\", \"cooltime\": \"10\"}, {\"level\": \"22\", \"name\": \"빙산\", \"element\": \"얼음\", \"power\": \"70\", \"cooltime\": \"15\"}, {\"level\": \"30\", \"name\": \"서리 낀 입김\", \"element\": \"얼음\", \"power\": \"90\", \"cooltime\": \"22\"}, {\"level\": \"40\", \"name\": \"아이시클 불릿\", \"element\": \"얼음\", \"power\": \"110\", \"cooltime\": \"35\"}, {\"level\": \"50\", \"name\": \"눈보라 스파이크\", \"element\": \"얼음\", \"power\": \"130\", \"cooltime\": \"45\"}]",
+    "activeSkills_count_new": 7
+  },
+  {
+    "id": "6B",
+    "url": "https://paldb.cc/ko/Fuack_Ignis",
+    "passiveSkills_new": "",
+    "passiveSkills_count_new": 0,
+    "activeSkills_enhanced": "[{\"level\": \"1\", \"name\": \"파이어 샷\", \"element\": \"화염\", \"power\": \"30\", \"cooltime\": \"2\"}, {\"level\": \"7\", \"name\": \"스피릿 파이어\", \"element\": \"화염\", \"power\": \"45\", \"cooltime\": \"7\"}, {\"level\": \"15\", \"name\": \"버블 샷\", \"element\": \"물\", \"power\": \"65\", \"cooltime\": \"13\"}, {\"level\": \"22\", \"name\": \"파이어 브레스\", \"element\": \"화염\", \"power\": \"70\", \"cooltime\": \"15\"}, {\"level\": \"30\", \"name\": \"화염 장벽\", \"element\": \"화염\", \"power\": \"100\", \"cooltime\": \"30\"}, {\"level\": \"40\", \"name\": \"하이드로 슬라이서\", \"element\": \"물\", \"power\": \"130\", \"cooltime\": \"45\"}, {\"level\": \"50\", \"name\": \"분화\", \"element\": \"화염\", \"power\": \"130\", \"cooltime\": \"45\"}]",
+    "activeSkills_count_new": 7
+  },
+  {
+    "id": "10B",
+    "url": "https://paldb.cc/ko/Pengullet_Lux",
+    "passiveSkills_new": "",
+    "passiveSkills_count_new": 0,
+    "activeSkills_enhanced": "[{\"level\": \"1\", \"name\": \"번개 창\", \"element\": \"번개\", \"power\": \"30\", \"cooltime\": \"2\"}, {\"level\": \"7\", \"name\": \"번개 구체\", \"element\": \"번개\", \"power\": \"50\", \"cooltime\": \"9\"}, {\"level\": \"15\", \"name\": \"버블 샷\", \"element\": \"물\", \"power\": \"65\", \"cooltime\": \"13\"}, {\"level\": \"22\", \"name\": \"라인 스플래시\", \"element\": \"물\", \"power\": \"90\", \"cooltime\": \"22\"}, {\"level\": \"30\", \"name\": \"물폭탄\", \"element\": \"물\", \"power\": \"100\", \"cooltime\": \"30\"}, {\"level\": \"40\", \"name\": \"트라이 스파크\", \"element\": \"번개\", \"power\": \"110\", \"cooltime\": \"35\"}, {\"level\": \"50\", \"name\": \"번개 일격\", \"element\": \"번개\", \"power\": \"120\", \"cooltime\": \"40\"}]",
+    "activeSkills_count_new": 7
+  },
+  {
+    "id": "11B",
+    "url": "https://paldb.cc/ko/Penking_Lux",
+    "passiveSkills_new": "",
+    "passiveSkills_count_new": 0,
+    "activeSkills_enhanced": "[{\"level\": \"1\", \"name\": \"번개 창\", \"element\": \"번개\", \"power\": \"30\", \"cooltime\": \"2\"}, {\"level\": \"7\", \"name\": \"플라즈마 토네이도\", \"element\": \"번개\", \"power\": \"65\", \"cooltime\": \"13\"}, {\"level\": \"15\", \"name\": \"버블 샷\", \"element\": \"물\", \"power\": \"65\", \"cooltime\": \"13\"}, {\"level\": \"22\", \"name\": \"트라이 스파크\", \"element\": \"번개\", \"power\": \"110\", \"cooltime\": \"35\"}, {\"level\": \"30\", \"name\": \"썬더 슬라이딩\", \"element\": \"번개\", \"power\": \"145\", \"cooltime\": \"35\"}, {\"level\": \"40\", \"name\": \"아쿠아 서지\", \"element\": \"물\", \"power\": \"160\", \"cooltime\": \"56\"}, {\"level\": \"50\", \"name\": \"번개 폭풍\", \"element\": \"번개\", \"power\": \"160\", \"cooltime\": \"60\"}]",
+    "activeSkills_count_new": 7
+  },
+  {
+    "id": "12B",
+    "url": "https://paldb.cc/ko/Jolthog_Cryst",
+    "passiveSkills_new": "",
+    "passiveSkills_count_new": 0,
+    "activeSkills_enhanced": "[{\"level\": \"1\", \"name\": \"얼음 미사일\", \"element\": \"얼음\", \"power\": \"30\", \"cooltime\": \"3\"}, {\"level\": \"7\", \"name\": \"파워 샷\", \"element\": \"무속성\", \"power\": \"35\", \"cooltime\": \"4\"}, {\"level\": \"15\", \"name\": \"빙산\", \"element\": \"얼음\", \"power\": \"70\", \"cooltime\": \"15\"}, {\"level\": \"22\", \"name\": \"파워 폭탄\", \"element\": \"무속성\", \"power\": \"70\", \"cooltime\": \"15\"}, {\"level\": \"30\", \"name\": \"얼음 칼날\", \"element\": \"얼음\", \"power\": \"55\", \"cooltime\": \"10\"}, {\"level\": \"40\", \"name\": \"서리 낀 입김\", \"element\": \"얼음\", \"power\": \"90\", \"cooltime\": \"22\"}, {\"level\": \"50\", \"name\": \"눈보라 스파이크\", \"element\": \"얼음\", \"power\": \"130\", \"cooltime\": \"45\"}]",
+    "activeSkills_count_new": 7
+  }
+]

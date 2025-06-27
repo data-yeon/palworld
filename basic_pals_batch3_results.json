@@ -1,0 +1,71 @@
+{
+  "batch_info": {
+    "batch_number": 3,
+    "timestamp": "2025-01-05T16:00:00",
+    "pal_range": "131-133",
+    "total_pals": 3,
+    "success_count": 3,
+    "success_rate": "100%"
+  },
+  "crawled_data": {
+    "131": {
+      "id": "131",
+      "name": "스모키",
+      "englishName": "Smokie",
+      "description": "The black flames are only warm to the touch, but anything that remains in contact with them slowly melts from the inside. Hold some cheese above them, and it becomes a true delicacy.",
+      "type1": "Dark",
+      "type2": "",
+      "hp": "???",
+      "attack": "???",
+      "defense": "???",
+      "rarity": "3",
+      "size": "S",
+      "partnerSkill": "Dig, Dog! Dig! When activated, uses its sharp sense of smell to detect nearby Chromite. While fighting together, a large amount of Chromite is obtained.",
+      "workSkills": "Gathering Lv. 2",
+      "activeSkills": "Missing Information",
+      "dropItems": "Bone, Crude Oil",
+      "eggType": "Dark Large Egg"
+    },
+    "132": {
+      "id": "132",
+      "name": "셀레스디르",
+      "englishName": "Celesdir",
+      "description": "Ancient texts refer to it as the Beast of Salvation. The light emitted by Celesdir purifies everything, literally causing things to vanish from existence without leaving a trace.",
+      "type1": "Neutral",
+      "type2": "",
+      "hp": "4400",
+      "attack": "743",
+      "defense": "635",
+      "rarity": "4",
+      "size": "L",
+      "partnerSkill": "Blessing of Purification - Can be ridden. Increases the player's auto recovery speed while mounted.",
+      "workSkills": "Lumbering Lv. 4, Gathering Lv. 1",
+      "activeSkills": "Missing Information",
+      "dropItems": "Hexolite Quartz, Horn, Leather",
+      "eggType": "Large Regular Egg"
+    },
+    "133": {
+      "id": "133",
+      "name": "오마스쿨",
+      "englishName": "Omascul",
+      "description": "The mask it wears is not its face, they say. It seems in front, but it's not there, no way. From shadows deep, it watches night and day. Glance away, and closer it will stray.",
+      "type1": "Dark",
+      "type2": "",
+      "hp": "???",
+      "attack": "???",
+      "defense": "???",
+      "rarity": "3",
+      "size": "M",
+      "partnerSkill": "Missing Information",
+      "workSkills": "Missing Information",
+      "activeSkills": "Missing Information",
+      "dropItems": "Missing Information",
+      "eggType": "Dark Large Egg"
+    }
+  },
+  "notes": [
+    "131번 Smokie와 133번 Omascul은 일부 스탯 정보가 누락되어 있음",
+    "132번 Celesdir는 완전한 정보 수집 성공",
+    "모든 팰이 새로운 Feybreak 업데이트로 추가된 팰들임"
+  ]
+} 

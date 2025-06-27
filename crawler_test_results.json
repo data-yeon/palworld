@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "error": "404 Client Error: Not Found for url: https://paldb.cc/ko/Pal/1"
+  },
+  {
+    "id": "2",
+    "error": "404 Client Error: Not Found for url: https://paldb.cc/ko/Pal/2"
+  },
+  {
+    "id": "5B",
+    "error": "404 Client Error: Not Found for url: https://paldb.cc/ko/Pal/5/Variant"
+  },
+  {
+    "id": "10B",
+    "error": "404 Client Error: Not Found for url: https://paldb.cc/ko/Pal/10/Variant"
+  }
+]

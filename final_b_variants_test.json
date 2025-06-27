@@ -1,0 +1,47 @@
+[
+  {
+    "pal_id": "5B",
+    "pal_name": "Foxparks_Cryst",
+    "url": "https://paldb.cc/ko/Foxparks_Cryst",
+    "activeSkills": [],
+    "passiveSkills": [],
+    "raw_html_length": 9735,
+    "parsing_method": "direct_text_regex"
+  },
+  {
+    "pal_id": "6B",
+    "pal_name": "Fuack_Ignis",
+    "url": "https://paldb.cc/ko/Fuack_Ignis",
+    "activeSkills": [],
+    "passiveSkills": [],
+    "raw_html_length": 9886,
+    "parsing_method": "direct_text_regex"
+  },
+  {
+    "pal_id": "10B",
+    "pal_name": "Pengullet_Lux",
+    "url": "https://paldb.cc/ko/Pengullet_Lux",
+    "activeSkills": [],
+    "passiveSkills": [],
+    "raw_html_length": 9856,
+    "parsing_method": "direct_text_regex"
+  },
+  {
+    "pal_id": "11B",
+    "pal_name": "Penking_Lux",
+    "url": "https://paldb.cc/ko/Penking_Lux",
+    "activeSkills": [],
+    "passiveSkills": [],
+    "raw_html_length": 10064,
+    "parsing_method": "direct_text_regex"
+  },
+  {
+    "pal_id": "12B",
+    "pal_name": "Jolthog_Cryst",
+    "url": "https://paldb.cc/ko/Jolthog_Cryst",
+    "activeSkills": [],
+    "passiveSkills": [],
+    "raw_html_length": 9586,
+    "parsing_method": "direct_text_regex"
+  }
+]

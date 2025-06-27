@@ -1,0 +1,832 @@
+[
+  {
+    "type": "base",
+    "name": "Lamball",
+    "url": "https://paldb.cc/ko/Lamball"
+  },
+  {
+    "type": "variant",
+    "name": "Lamball_Ice",
+    "url": "https://paldb.cc/ko/Lamball_Ice",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Lamball_Ignis",
+    "url": "https://paldb.cc/ko/Lamball_Ignis",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Lamball_Cryst",
+    "url": "https://paldb.cc/ko/Lamball_Cryst",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Lamball_Lux",
+    "url": "https://paldb.cc/ko/Lamball_Lux",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Lamball_Terra",
+    "url": "https://paldb.cc/ko/Lamball_Terra",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Lamball_Noct",
+    "url": "https://paldb.cc/ko/Lamball_Noct",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Lamball_Botan",
+    "url": "https://paldb.cc/ko/Lamball_Botan",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Lamball_Fire",
+    "url": "https://paldb.cc/ko/Lamball_Fire",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Lamball_Electric",
+    "url": "https://paldb.cc/ko/Lamball_Electric",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Lamball_Ground",
+    "url": "https://paldb.cc/ko/Lamball_Ground",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Lamball_Dark",
+    "url": "https://paldb.cc/ko/Lamball_Dark",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Lamball_Grass",
+    "url": "https://paldb.cc/ko/Lamball_Grass",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Lamball_Water",
+    "url": "https://paldb.cc/ko/Lamball_Water",
+    "status": "to_check"
+  },
+  {
+    "type": "base",
+    "name": "Cattiva",
+    "url": "https://paldb.cc/ko/Cattiva"
+  },
+  {
+    "type": "variant",
+    "name": "Cattiva_Ice",
+    "url": "https://paldb.cc/ko/Cattiva_Ice",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Cattiva_Ignis",
+    "url": "https://paldb.cc/ko/Cattiva_Ignis",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Cattiva_Cryst",
+    "url": "https://paldb.cc/ko/Cattiva_Cryst",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Cattiva_Lux",
+    "url": "https://paldb.cc/ko/Cattiva_Lux",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Cattiva_Terra",
+    "url": "https://paldb.cc/ko/Cattiva_Terra",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Cattiva_Noct",
+    "url": "https://paldb.cc/ko/Cattiva_Noct",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Cattiva_Botan",
+    "url": "https://paldb.cc/ko/Cattiva_Botan",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Cattiva_Fire",
+    "url": "https://paldb.cc/ko/Cattiva_Fire",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Cattiva_Electric",
+    "url": "https://paldb.cc/ko/Cattiva_Electric",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Cattiva_Ground",
+    "url": "https://paldb.cc/ko/Cattiva_Ground",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Cattiva_Dark",
+    "url": "https://paldb.cc/ko/Cattiva_Dark",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Cattiva_Grass",
+    "url": "https://paldb.cc/ko/Cattiva_Grass",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Cattiva_Water",
+    "url": "https://paldb.cc/ko/Cattiva_Water",
+    "status": "to_check"
+  },
+  {
+    "type": "base",
+    "name": "Chikipi",
+    "url": "https://paldb.cc/ko/Chikipi"
+  },
+  {
+    "type": "variant",
+    "name": "Chikipi_Ice",
+    "url": "https://paldb.cc/ko/Chikipi_Ice",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Chikipi_Ignis",
+    "url": "https://paldb.cc/ko/Chikipi_Ignis",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Chikipi_Cryst",
+    "url": "https://paldb.cc/ko/Chikipi_Cryst",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Chikipi_Lux",
+    "url": "https://paldb.cc/ko/Chikipi_Lux",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Chikipi_Terra",
+    "url": "https://paldb.cc/ko/Chikipi_Terra",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Chikipi_Noct",
+    "url": "https://paldb.cc/ko/Chikipi_Noct",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Chikipi_Botan",
+    "url": "https://paldb.cc/ko/Chikipi_Botan",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Chikipi_Fire",
+    "url": "https://paldb.cc/ko/Chikipi_Fire",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Chikipi_Electric",
+    "url": "https://paldb.cc/ko/Chikipi_Electric",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Chikipi_Ground",
+    "url": "https://paldb.cc/ko/Chikipi_Ground",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Chikipi_Dark",
+    "url": "https://paldb.cc/ko/Chikipi_Dark",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Chikipi_Grass",
+    "url": "https://paldb.cc/ko/Chikipi_Grass",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Chikipi_Water",
+    "url": "https://paldb.cc/ko/Chikipi_Water",
+    "status": "to_check"
+  },
+  {
+    "type": "base",
+    "name": "Lifmunk",
+    "url": "https://paldb.cc/ko/Lifmunk"
+  },
+  {
+    "type": "variant",
+    "name": "Lifmunk_Ice",
+    "url": "https://paldb.cc/ko/Lifmunk_Ice",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Lifmunk_Ignis",
+    "url": "https://paldb.cc/ko/Lifmunk_Ignis",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Lifmunk_Cryst",
+    "url": "https://paldb.cc/ko/Lifmunk_Cryst",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Lifmunk_Lux",
+    "url": "https://paldb.cc/ko/Lifmunk_Lux",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Lifmunk_Terra",
+    "url": "https://paldb.cc/ko/Lifmunk_Terra",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Lifmunk_Noct",
+    "url": "https://paldb.cc/ko/Lifmunk_Noct",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Lifmunk_Botan",
+    "url": "https://paldb.cc/ko/Lifmunk_Botan",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Lifmunk_Fire",
+    "url": "https://paldb.cc/ko/Lifmunk_Fire",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Lifmunk_Electric",
+    "url": "https://paldb.cc/ko/Lifmunk_Electric",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Lifmunk_Ground",
+    "url": "https://paldb.cc/ko/Lifmunk_Ground",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Lifmunk_Dark",
+    "url": "https://paldb.cc/ko/Lifmunk_Dark",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Lifmunk_Grass",
+    "url": "https://paldb.cc/ko/Lifmunk_Grass",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Lifmunk_Water",
+    "url": "https://paldb.cc/ko/Lifmunk_Water",
+    "status": "to_check"
+  },
+  {
+    "type": "base",
+    "name": "Foxparks",
+    "url": "https://paldb.cc/ko/Foxparks"
+  },
+  {
+    "type": "variant",
+    "name": "Foxparks_Ice",
+    "url": "https://paldb.cc/ko/Foxparks_Ice",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Foxparks_Ignis",
+    "url": "https://paldb.cc/ko/Foxparks_Ignis",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Foxparks_Cryst",
+    "url": "https://paldb.cc/ko/Foxparks_Cryst",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Foxparks_Lux",
+    "url": "https://paldb.cc/ko/Foxparks_Lux",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Foxparks_Terra",
+    "url": "https://paldb.cc/ko/Foxparks_Terra",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Foxparks_Noct",
+    "url": "https://paldb.cc/ko/Foxparks_Noct",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Foxparks_Botan",
+    "url": "https://paldb.cc/ko/Foxparks_Botan",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Foxparks_Fire",
+    "url": "https://paldb.cc/ko/Foxparks_Fire",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Foxparks_Electric",
+    "url": "https://paldb.cc/ko/Foxparks_Electric",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Foxparks_Ground",
+    "url": "https://paldb.cc/ko/Foxparks_Ground",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Foxparks_Dark",
+    "url": "https://paldb.cc/ko/Foxparks_Dark",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Foxparks_Grass",
+    "url": "https://paldb.cc/ko/Foxparks_Grass",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Foxparks_Water",
+    "url": "https://paldb.cc/ko/Foxparks_Water",
+    "status": "to_check"
+  },
+  {
+    "type": "base",
+    "name": "Fuack",
+    "url": "https://paldb.cc/ko/Fuack"
+  },
+  {
+    "type": "variant",
+    "name": "Fuack_Ice",
+    "url": "https://paldb.cc/ko/Fuack_Ice",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Fuack_Ignis",
+    "url": "https://paldb.cc/ko/Fuack_Ignis",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Fuack_Cryst",
+    "url": "https://paldb.cc/ko/Fuack_Cryst",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Fuack_Lux",
+    "url": "https://paldb.cc/ko/Fuack_Lux",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Fuack_Terra",
+    "url": "https://paldb.cc/ko/Fuack_Terra",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Fuack_Noct",
+    "url": "https://paldb.cc/ko/Fuack_Noct",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Fuack_Botan",
+    "url": "https://paldb.cc/ko/Fuack_Botan",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Fuack_Fire",
+    "url": "https://paldb.cc/ko/Fuack_Fire",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Fuack_Electric",
+    "url": "https://paldb.cc/ko/Fuack_Electric",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Fuack_Ground",
+    "url": "https://paldb.cc/ko/Fuack_Ground",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Fuack_Dark",
+    "url": "https://paldb.cc/ko/Fuack_Dark",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Fuack_Grass",
+    "url": "https://paldb.cc/ko/Fuack_Grass",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Fuack_Water",
+    "url": "https://paldb.cc/ko/Fuack_Water",
+    "status": "to_check"
+  },
+  {
+    "type": "base",
+    "name": "Sparkit",
+    "url": "https://paldb.cc/ko/Sparkit"
+  },
+  {
+    "type": "variant",
+    "name": "Sparkit_Ice",
+    "url": "https://paldb.cc/ko/Sparkit_Ice",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Sparkit_Ignis",
+    "url": "https://paldb.cc/ko/Sparkit_Ignis",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Sparkit_Cryst",
+    "url": "https://paldb.cc/ko/Sparkit_Cryst",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Sparkit_Lux",
+    "url": "https://paldb.cc/ko/Sparkit_Lux",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Sparkit_Terra",
+    "url": "https://paldb.cc/ko/Sparkit_Terra",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Sparkit_Noct",
+    "url": "https://paldb.cc/ko/Sparkit_Noct",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Sparkit_Botan",
+    "url": "https://paldb.cc/ko/Sparkit_Botan",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Sparkit_Fire",
+    "url": "https://paldb.cc/ko/Sparkit_Fire",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Sparkit_Electric",
+    "url": "https://paldb.cc/ko/Sparkit_Electric",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Sparkit_Ground",
+    "url": "https://paldb.cc/ko/Sparkit_Ground",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Sparkit_Dark",
+    "url": "https://paldb.cc/ko/Sparkit_Dark",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Sparkit_Grass",
+    "url": "https://paldb.cc/ko/Sparkit_Grass",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Sparkit_Water",
+    "url": "https://paldb.cc/ko/Sparkit_Water",
+    "status": "to_check"
+  },
+  {
+    "type": "base",
+    "name": "Tanzee",
+    "url": "https://paldb.cc/ko/Tanzee"
+  },
+  {
+    "type": "variant",
+    "name": "Tanzee_Ice",
+    "url": "https://paldb.cc/ko/Tanzee_Ice",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Tanzee_Ignis",
+    "url": "https://paldb.cc/ko/Tanzee_Ignis",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Tanzee_Cryst",
+    "url": "https://paldb.cc/ko/Tanzee_Cryst",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Tanzee_Lux",
+    "url": "https://paldb.cc/ko/Tanzee_Lux",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Tanzee_Terra",
+    "url": "https://paldb.cc/ko/Tanzee_Terra",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Tanzee_Noct",
+    "url": "https://paldb.cc/ko/Tanzee_Noct",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Tanzee_Botan",
+    "url": "https://paldb.cc/ko/Tanzee_Botan",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Tanzee_Fire",
+    "url": "https://paldb.cc/ko/Tanzee_Fire",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Tanzee_Electric",
+    "url": "https://paldb.cc/ko/Tanzee_Electric",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Tanzee_Ground",
+    "url": "https://paldb.cc/ko/Tanzee_Ground",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Tanzee_Dark",
+    "url": "https://paldb.cc/ko/Tanzee_Dark",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Tanzee_Grass",
+    "url": "https://paldb.cc/ko/Tanzee_Grass",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Tanzee_Water",
+    "url": "https://paldb.cc/ko/Tanzee_Water",
+    "status": "to_check"
+  },
+  {
+    "type": "base",
+    "name": "Rooby",
+    "url": "https://paldb.cc/ko/Rooby"
+  },
+  {
+    "type": "variant",
+    "name": "Rooby_Ice",
+    "url": "https://paldb.cc/ko/Rooby_Ice",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Rooby_Ignis",
+    "url": "https://paldb.cc/ko/Rooby_Ignis",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Rooby_Cryst",
+    "url": "https://paldb.cc/ko/Rooby_Cryst",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Rooby_Lux",
+    "url": "https://paldb.cc/ko/Rooby_Lux",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Rooby_Terra",
+    "url": "https://paldb.cc/ko/Rooby_Terra",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Rooby_Noct",
+    "url": "https://paldb.cc/ko/Rooby_Noct",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Rooby_Botan",
+    "url": "https://paldb.cc/ko/Rooby_Botan",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Rooby_Fire",
+    "url": "https://paldb.cc/ko/Rooby_Fire",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Rooby_Electric",
+    "url": "https://paldb.cc/ko/Rooby_Electric",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Rooby_Ground",
+    "url": "https://paldb.cc/ko/Rooby_Ground",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Rooby_Dark",
+    "url": "https://paldb.cc/ko/Rooby_Dark",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Rooby_Grass",
+    "url": "https://paldb.cc/ko/Rooby_Grass",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Rooby_Water",
+    "url": "https://paldb.cc/ko/Rooby_Water",
+    "status": "to_check"
+  },
+  {
+    "type": "base",
+    "name": "Pengullet",
+    "url": "https://paldb.cc/ko/Pengullet"
+  },
+  {
+    "type": "variant",
+    "name": "Pengullet_Ice",
+    "url": "https://paldb.cc/ko/Pengullet_Ice",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Pengullet_Ignis",
+    "url": "https://paldb.cc/ko/Pengullet_Ignis",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Pengullet_Cryst",
+    "url": "https://paldb.cc/ko/Pengullet_Cryst",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Pengullet_Lux",
+    "url": "https://paldb.cc/ko/Pengullet_Lux",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Pengullet_Terra",
+    "url": "https://paldb.cc/ko/Pengullet_Terra",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Pengullet_Noct",
+    "url": "https://paldb.cc/ko/Pengullet_Noct",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Pengullet_Botan",
+    "url": "https://paldb.cc/ko/Pengullet_Botan",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Pengullet_Fire",
+    "url": "https://paldb.cc/ko/Pengullet_Fire",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Pengullet_Electric",
+    "url": "https://paldb.cc/ko/Pengullet_Electric",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Pengullet_Ground",
+    "url": "https://paldb.cc/ko/Pengullet_Ground",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Pengullet_Dark",
+    "url": "https://paldb.cc/ko/Pengullet_Dark",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Pengullet_Grass",
+    "url": "https://paldb.cc/ko/Pengullet_Grass",
+    "status": "to_check"
+  },
+  {
+    "type": "variant",
+    "name": "Pengullet_Water",
+    "url": "https://paldb.cc/ko/Pengullet_Water",
+    "status": "to_check"
+  }
+]
